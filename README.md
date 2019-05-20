@@ -58,6 +58,7 @@ Quesitos de pontuação:
     - Cada um dos 7 golpes mais velozes de direita e de esquerda de cada
       atleta são contabilizados conforme a regra acima e ainda são
       multiplicados por 3 antes de serem somados ao total do atleta.
+      
       Obs: O número de golpes considerados como "destreza" é proporcional 
       ao tempo estabelecido para a partida, por exemplo, para um jogo de 180 
       segundos, serão 7 golpes de direita e 7 de esquerda, se aumentar o 

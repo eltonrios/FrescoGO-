@@ -172,7 +172,7 @@ Golpes DIR [ 100 100  87  84  84  79  79 ] => 87     <-- golpes de direita mais 
                                    \-- pontuação de equilíbrio
                                             \-- velocidade máxima a detectar
 
-
+```
 - Relatório (ao final da apresentação)
 
 ```

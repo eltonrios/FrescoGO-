@@ -136,36 +136,36 @@ A seguir são explicados os formatos de exibição do resultado da apresentaçã
 
 ```
 -------------------------------------------------
-            Ludika / Elton                           <-- nome dos atletas
+            Ludika / Elton                         <-- nome dos atletas
 -------------------------------------------------
-Pontuação Bruta......:14890 pts                      <-- Média simples da pontuação bruta da dupla
-Equilibrio...........: 4294966717 pts (-)            <-- Desconto de equilíbrio
-Quedas...............: 2320 pts (-)                  <-- Desconto pelas quedas
-Velocidade Média.....: 69 km/h                       <-- Velocidade Média (simples/quadrática)
-PONTUAÇÃO FINAL......: 12657 pts                     <-- Pontuação após aplicadas as penalizações acima
+Pontuação Bruta......:14890 pts                    <-- Média simples da pontuação bruta da dupla
+Equilibrio...........: 4294966717 pts (-)          <-- Desconto de equilíbrio
+Quedas...............: 2320 pts (-)                <-- Desconto pelas quedas
+Velocidade Média.....: 69 km/h                     <-- Velocidade Média (simples/quadrática)
+PONTUAÇÃO FINAL......: 12657 pts                   <-- Pontuação após aplicadas as penalizações acima
 -------------------------------------------------
-Tempo de Jogo........: 182 s                         <-- Tempo decorrido de jogo (bola no ar)
-Tempo Restante.......: 0 s                           <-- Tempo que resta de jogo
+Tempo de Jogo........: 182 s                       <-- Tempo decorrido de jogo (bola no ar)
+Tempo Restante.......: 0 s                         <-- Tempo que resta de jogo
 -------------------------------------------------
-Quantidade Quedas....: 5                             <-- Quantidade de bolas ao chão
-Golpes...............: 497                           <-- Quantidade de golpes
-Juiz.................: Rillion                       <-- Nome do juiz da partida
+Quantidade Quedas....: 5                           <-- Quantidade de bolas ao chão
+Golpes...............: 497                         <-- Quantidade de golpes
+Juiz.................: Rillion                     <-- Nome do juiz da partida
 -------------------------------------------------
-Jogador à esquerda...: Ludika                        <-- Jogador posicionado à esquerda do juiz
-Pontuação............: 15718 pts                     <-- Pontuação bruta acumulada do jogador à esquerda
-Velocidade Média.....: 69 Km/h                       <-- Velocidade média (simples/quadrática) do jogador à esquerda
+Jogador à esquerda...: Ludika                      <-- Jogador posicionado à esquerda do juiz
+Pontuação............: 15718 pts                   <-- Pontuação bruta acumulada do jogador à esquerda
+Velocidade Média.....: 69 Km/h                     <-- Velocidade média (simples/quadrática) do jogador à esquerda
 
-Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100    <-- golpes de esquerda mais fortes => média simples
-Golpes DIR [ 100 100 100 100 100 100 100 ] => 100    <-- golpes de direita mais fortes => média simples
+Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
+Golpes DIR [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de direita mais fortes => média simples
 -------------------------------------------------
-Jogador à direita....: Elton                         <-- Jogador posicionado à direita do juiz
-Pontuação............: 14063 pts                     <-- Pontuação bruta acumulada do jogador à direita
-Velocidade Média.....: 74 Km/h                       <-- Velocidade média (simples/quadrática) do jogador à direita
+Jogador à direita....: Elton                       <-- Jogador posicionado à direita do juiz
+Pontuação............: 14063 pts                   <-- Pontuação bruta acumulada do jogador à direita
+Velocidade Média.....: 74 Km/h                     <-- Velocidade média (simples/quadrática) do jogador à direita
 
-Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100    <-- golpes de esquerda mais fortes => média simples
-Golpes DIR [ 100 100  87  84  84  79  79 ] => 87     <-- golpes de direita mais fortes => média simples
+Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
+Golpes DIR [ 100 100  87  84  84  79  79 ] => 87   <-- golpes de direita mais fortes => média simples
 -------------------------------------------------
-(v1.72 / 800cm / 180s / pot=0 / equ=1 / cont=30 / max=30)    <-- configurações do jogo
+(v1.72 / 800cm / 180s / pot=0 / equ=1 / cont=30 / max=30)    <-- Rodapé de configurações do jogo
     \-- versão do software
            \-- distância entre os ateltas
                    \-- tempo máximo de apresentação

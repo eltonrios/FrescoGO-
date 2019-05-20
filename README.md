@@ -142,7 +142,7 @@ Pontuação Bruta......:14890 pts                      <-- Média simples da pon
 Equilibrio...........: 4294966717 pts (-)            <-- Desconto de equilíbrio
 Quedas...............: 2320 pts (-)                  <-- Desconto pelas quedas
 Velocidade Média.....: 69 km/h                       <-- Velocidade Média (simples/quadrática)
-PONTUAÇÃO FINAL......: 12657 pts                     <-- Pontuação após aplicados os descontos (penalizações) acima
+PONTUAÇÃO FINAL......: 12657 pts                     <-- Pontuação após aplicadas as penalizações acima
 -------------------------------------------------
 Tempo de Jogo........: 182 s                         <-- Tempo decorrido de jogo (bola no ar)
 Tempo Restante.......: 0 s                           <-- Tempo que resta de jogo

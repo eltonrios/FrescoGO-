@@ -1,9 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-# FrescoGO! (versão 1.72d)
+# FrescoGO! (versão 1.74)
 
 *FrescoGO!* é um marcador eletrônico semi-automático para treinamento e
-competições de Frescobol.
+competições de Frescobol. 
+
+Esta versão apresentada aqui é derivada da versão original, que pode ser 
+encontrada no link que será apresentado um pouco mais adiante.
 
 O aparelho marcador contém dois botões de marcação: um para o atleta à esquerda
 e um para o atleta à direita.

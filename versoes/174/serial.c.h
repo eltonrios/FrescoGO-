@@ -29,9 +29,36 @@ void Serial_Score (void) {
     Serial.println();
     Serial.println(F("-------------------------------------------------"));
     
+    //OK – TEMPO DE JOGO
+    sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
+    Serial.print(STR);
+    Serial.print(G.time/1000);
+    Serial.println(F(" s"));
+    
+    //OK – TEMPO RESTANTE
+    sprintf_P(STR, PSTR("%10S: "), F("Tempo Restante......."));
+    Serial.print(STR);
+    Serial.print(G.time > S.timeout ? 0 : (S.timeout-G.time)/1000);
+    Serial.println(F(" s"));
+    
+    //OK – QUANTIDADE BOLAS
+    sprintf_P(STR, PSTR("%10S: "), F("Quantidade Bolas....."));
+    Serial.print(STR);
+    Serial.println(Falls());
+    
+    //OK – QUANTIDADE DE GOLPES
+    sprintf_P(STR, PSTR("%10S: "), F("Golpes..............."));
+    Serial.print(STR);
+    Serial.println(G.hits);
+
+    //OK – JUIZ
+    sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
+    Serial.print(STR);
+    Serial.println(S.juiz);
 
     //OK - PONTUAÇÃO BRUTA 
-    sprintf_P(STR, PSTR("Pontuação Bruta......: %5ld"), ((G.ps[0]/100)+(G.ps[1]/100))/2);
+    Serial.println(F("-------------------------------------------------"));
+    sprintf_P(STR, PSTR("Pontuação Bruta......:%5ld"), ((G.ps[0]/100)+(G.ps[1]/100))/2);
     Serial.print(STR);
     Serial.println(F(" pts"));
 
@@ -63,34 +90,9 @@ void Serial_Score (void) {
     Serial.print(G.total);
     Serial.println(F(" pts"));
     
-    //OK – TEMPO DE JOGO
-    Serial.println(F("-------------------------------------------------"));
-    sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
-    Serial.print(STR);
-    Serial.print(G.time/1000);
-    Serial.println(F(" s"));
-    
-    //OK – TEMPO RESTANTE
-    sprintf_P(STR, PSTR("%10S: "), F("Tempo Restante......."));
-    Serial.print(STR);
-    Serial.print(G.time > S.timeout ? 0 : (S.timeout-G.time)/1000);
-    Serial.println(F(" s"));
-    
-    //OK – QUANTIDADE BOLAS
-    Serial.println(F("-------------------------------------------------"));
-    sprintf_P(STR, PSTR("%10S: "), F("Quantidade Bolas....."));
-    Serial.print(STR);
-    Serial.println(Falls());
-    
-    //OK – QUANTIDADE DE GOLPES
-    sprintf_P(STR, PSTR("%10S: "), F("Golpes..............."));
-    Serial.print(STR);
-    Serial.println(G.hits);
 
-    //OK – JUIZ
-    sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
-    Serial.print(STR);
-    Serial.println(S.juiz);
+    
+
 
     //OK - PLACAR INDIVIDUAL
     Serial.println(F("-------------------------------------------------"));
@@ -174,7 +176,7 @@ void Serial_Score (void) {
     //fim
 
     //sprintf_P(STR, PSTR("(v%d.%d / %dcm / %ds / pot=%d / equ=%d / cont=%d / max=%d)"),
-     sprintf_P(STR, PSTR("(CONF: v%d.%d.%d / %dcm / %ds / pot=%d / equ=%d /\n       cont=%d / max=%d)"),
+     sprintf_P(STR, PSTR("(v%d.%d.%d / %dcm / %ds / pot=%d / equ=%d /\n       cont=%d / max=%d)"),
                 MAJOR, MINOR, REVISION,
                 S.distancia,
                 (int)(S.timeout/1000),

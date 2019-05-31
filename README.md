@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-# FrescoGO! (versão 1.72)
+# FrescoGO! (versão 1.72d)
 
 *FrescoGO!* é um marcador eletrônico semi-automático para treinamento e
 competições de Frescobol.

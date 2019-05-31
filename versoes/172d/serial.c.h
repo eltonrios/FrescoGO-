@@ -46,27 +46,12 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.print((((bruta - equ3)*(3*Falls())/100)));
     Serial.println(F(" pts (-)"));
-    //Serial.print(bruta);
-    //Serial.println(F(" bruta"));
-    //Serial.print(equ1);
-    //Serial.println(F(" equ1"));
-    //Serial.print(equ2);
-    //Serial.println(F(" equ2"));
-    //Serial.print(equ3);
-    //Serial.println(F(" equ3"));
-    //Serial.print(((G.ps[0]/100)+(G.ps[1]/100))/2);
-    //Serial.print(((G.ps[0]/100)+(G.ps[1]/100))/2));
-    //Serial.println(F(" bruta"));
-    
-    
+        
     //OK - VELOCIDADE MÉDIA
     sprintf_P(STR, PSTR("Velocidade Média.....: "));
-    //sprintf_P(STR, PSTR("%10S: "), F("Ritmo"));
     Serial.print(STR);
     if (G.time > 5000) {
         Serial.print((int)G.pace[0]);
-        //Serial.print(F("/"));
-        //Serial.print((int)G.pace[1]);
         Serial.println(F(" Km/h"));
     } else {
         Serial.println("---");
@@ -116,23 +101,9 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.print(G.ps[0]/100);
     Serial.println(F(" pts"));
-    //sprintf_P(STR, PSTR("%10S: "), F("Velocidade Média....."));
-    //Serial.print(STR);
-    //Serial.print((int)G.pace[0]);
-    //Serial.println(F(" Km/h"));
         //Não mostra se não estiver marcando destrezas
         if (!S.potencia == 0) {
-        //Serial.print((int)G.pace[0]);
-        //Serial.print(F("/"));
-        //Serial.print((int)G.pace[1]);
-        //Serial.println(F(" Km/h"));
-    
-    
-        
-        
-        
         //jogador 0
-        //Serial.println();
         //inicio dos valores
             int sum0 = 0;
             Serial.print(F("Golpes ESQ [ "));
@@ -154,12 +125,10 @@ void Serial_Score (void) {
             }
             Serial.print(F("] => "));
             Serial.println(sum1/HITS_BESTS);
-        //Serial.println();
         //fim valores segunda linha
      //fim jogador 0
      
         } else {
-        //Serial.println();
     }
     //fim condição para marcar destrezas
      
@@ -171,15 +140,9 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.print(G.ps[1]/100);
     Serial.println(F(" pts"));
-    //sprintf_P(STR, PSTR("%10S: "), F("Velocidade Média....."));
-    //Serial.print(STR);
-    //Serial.print((int)G.pace[1]);
-    //Serial.println(F(" Km/h")); 
             //Não mostra se não estiver marcando destrezas
         if (!S.potencia == 0) {
-        //Serial.print((int)G.pace[0]);
         //jogador 1
-        //Serial.println();
         //inicio dos valores
             int sum2 = 0;
             Serial.print(F("Golpes ESQ [ "));
@@ -201,19 +164,13 @@ void Serial_Score (void) {
             }
             Serial.print(F("] => "));
             Serial.println(sum3/HITS_BESTS);
-        //Serial.println();
         //fim valores segunda linha
     //fim jogador 1  
         } else {
-        //Serial.println();
     }
     //fim condição para marcar destrezas
     Serial.println(F("-------------------------------------------------"));
-
     //destrezas
-
-     
-
     //fim
 
     sprintf_P(STR, PSTR("(v%d.%d / %dcm / %ds / pot=%d / equ=%d / cont=%d / max=%d)"),

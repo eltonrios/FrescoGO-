@@ -65,7 +65,7 @@ static const int MAP[2] = { PIN_LEFT, PIN_RIGHT };
 
 #define REF_TIMEOUT     180         // 3 mins
 #define REF_BESTS       7
-#define REF_FALLS       30          // 3.0%
+#define REF_CONT       30          // 3.0%
 #define REF_ABORT       10          // 10s per fall
 
 #define HITS_MAX        600

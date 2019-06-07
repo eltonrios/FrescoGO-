@@ -375,6 +375,7 @@ FINAL:       6665                       <-- Pontuação final da dupla
 - Como eu consigo um aparelho desses?
     - Entre em contato conosco por e-mail:
         - <go.frescobol@gmail.com>
+        - <elton339@gmail.com>        
 
 - Esse aparelho é um radar? Como o aparelho mede a velocidade da bola?
     - O aparelho não é um radar e mede a velocidade de maneira aproximada:

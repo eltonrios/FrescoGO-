@@ -168,18 +168,11 @@ Juiz.................: Rillion                     <-- Nome do juiz da partida
 -------------------------------------------------
 Jogador à esquerda...: Ludika                      <-- Jogador posicionado à esquerda do juiz
 Pontuação............: 15718 pts                   <-- Pontuação bruta acumulada do jogador à esquerda
-<!--
-Velocidade Média.....: 69 Km/h                     <-- Velocidade média (simples) do jogador à esquerda
--->
 Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
 Golpes DIR [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de direita mais fortes => média simples
 -------------------------------------------------
 Jogador à direita....: Elton                       <-- Jogador posicionado à direita do juiz
 Pontuação............: 14063 pts                   <-- Pontuação bruta acumulada do jogador à direita
-<!--
-Velocidade Média.....: 74 Km/h                     <-- Velocidade média (simples) do jogador à direita
--->
-
 Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
 Golpes DIR [ 100 100  87  84  84  79  79 ] => 87   <-- golpes de direita mais fortes => média simples
 -------------------------------------------------

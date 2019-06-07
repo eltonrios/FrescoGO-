@@ -36,9 +36,9 @@ void Serial_Score (void) {
     //Serial.println(F(" s"));
     sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
     Serial.print(STR);
-    Serial.print(int(tempo/60);
+    Serial.print(int(G.time/1000)/60);
     Serial.print(":");
-    Serial.println(tempo/60)-((int(tempo/60));
+    Serial.println((G.time/1000)/60)-(int((G.time/1000)/60));
     
     //OK – TEMPO RESTANTE
     //sprintf_P(STR, PSTR("%10S: "), F("Tempo Restante......."));
@@ -49,7 +49,7 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.print(int((S.timeout-G.time)/1000)/60);
     Serial.print(":");
-    Serial.println((S.timeout-G.time)/1000)/60)-((int((S.timeout-G.time)/1000)/60));
+    Serial.println((S.timeout-G.time)/1000/60)-(int((S.timeout-G.time)/1000/60));
     
     //OK – QUANTIDADE BOLAS
     sprintf_P(STR, PSTR("%10S: "), F("Quantidade Bolas....."));

@@ -1,12 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-# FrescoGO! (versão 1.74)
+# FrescoGO! by EGR (versão 1.75)
 
 *FrescoGO!* é um marcador eletrônico semi-automático para treinamento e
 competições de Frescobol. 
 
 Esta versão apresentada aqui é derivada da versão original, que pode ser 
-encontrada no link que será apresentado um pouco mais adiante.
+encontrada em https://github.com/frescogo/frescogo.
 
 O aparelho marcador contém dois botões de marcação: um para o atleta à esquerda
 e um para o atleta à direita.
@@ -58,19 +58,29 @@ Quesitos de pontuação:
         - 80 kmh vale **64 pontos**: `80x80/100 = 6400/100 = 64`.
         - 90 kmh vale **81 pontos**: `90x90/100 = 8100/100 = 81`.
 - **Potência:**
-    - Cada um dos 7 golpes mais velozes de direita e de esquerda de cada
-      atleta são contabilizados conforme a regra acima e ainda são
-      multiplicados por 3 antes de serem somados ao total do atleta.
+    - Para um jogo de 3 minutos (180 segundos), as médias dos 7 golpes 
+      mais velozes de **direita** e de **esquerda** (*forehand* e *backhand*)
+      de cada atleta são contabilizados conforme a fórmula de *Volume* (demonstrado
+      acima) e ainda são multiplicados por 21 antes de serem somados ao 
+      total do atleta.
       
       Obs: O número de golpes considerados como "destreza" é proporcional 
-      ao tempo estabelecido para a partida, por exemplo, para um jogo de 180 
-      segundos, serão 7 golpes de direita e 7 de esquerda, se aumentar o 
-      tempo de jogo, aumentarão o número desses golpes. 
+      ao tempo estabelecido para a partida, no caso de 180 segundos, serão 
+      7 golpes de direita e 7 de esquerda, se aumentar o tempo de jogo, 
+      aumentarão o número desses golpes. 
       
       Exemplo:
-        - Se um desses golpes mais velozes foi a 50 kmh, o atleta vai somar
-          mais **75 pontos** por aquele golpe (`25x3=75`), além dos 25 pontos
-          já somados no quesito de volume.
+        - Os golpes mais velozes de um dos atleta foram os seguintes:
+            - De direita:  **`87`, `85`, `83`, `82`, `75`, `75`, `73`**, `70`, `69`, ...
+            - De esquerda: **`52`, `50`, `50`, `49`, `44`, `35`, ` 0`,** ` 0`, ` 0`, ...
+        - A média dos 7 golpes mais velozes de direita foi de 80 kmh
+          (`(87+85+83+82+75+75+73)/7 = 80`),
+          somando `64x21` = **1344 pontos**.
+        - A média dos 7 golpes mais velozes de esquerda foi de 40 kmh
+          (`(52+50+50+49+44+35+0)/7 = 40`),
+          somando `16x21` = **336 pontos**.
+        - Esse atleta vai então obter **1680 pontos** de *Potência* que ainda
+          serão somados com os seus pontos de *Volume*.
 
 <!--
     - OBS: Em uma apresentação de 3 minutos, 7 golpes correspondem a
@@ -94,9 +104,10 @@ Quesitos de pontuação:
         - Com 5 quedas, a dupla perderá 15% dos pontos, ou seja, se ela pontuou
           4400 após o equilíbrio, a pontuação final será de **3740 pontos**
           (`4400x85%`).
-<!--
-    - A apresentação é encerrada sumariamente na 25a queda.
--->
+    - Os dois últimos golpes antes da queda também são desconsiderados.
+    - O número de bolas segue a proporção de 1 bola para cada 10 segundos de jogo,
+    portanto essa quantidade depende do tempo estabelecido para a partida, e a
+    apresentação é encerrada sumariamente ao atingir este valor.
 
 -------------------------------------------------------------------------------
 
@@ -126,7 +137,8 @@ Quesitos de pontuação:
 - O juiz então pressiona o botão que habilita o saque e o fluxo reinicia.
 - Um som agudo é emitido a cada 1 minuto e também quando faltam 30, 10, e 5
   segundos para a apresentação terminar.
-- A apresentação termina após 3 minutos cronometrados. <!-- ou após a 25a queda.-->
+- A apresentação termina após o término do tempo estabelecido para a partida
+ou ao atingir o número de bolas (quedas)
   Um som grave longo indica que a apresentação terminou.
 - Ao fim da apresentação, é gerado um relatório com todas as medições de
   golpes.
@@ -144,7 +156,7 @@ A seguir são explicados os formatos de exibição do resultado da apresentaçã
 Pontuação Bruta......:14890 pts                    <-- Média simples da pontuação bruta da dupla
 Equilibrio...........: 4294966717 pts (-)          <-- Desconto de equilíbrio
 Quedas...............: 2320 pts (-)                <-- Desconto pelas quedas
-Velocidade Média.....: 69 km/h                     <-- Velocidade Média (simples/quadrática)
+Velocidade Média.....: 69 km/h                     <-- Velocidade Média (simples)
 PONTUAÇÃO FINAL......: 12657 pts                   <-- Pontuação após aplicadas as penalizações acima
 -------------------------------------------------
 Tempo de Jogo........: 182 s                       <-- Tempo decorrido de jogo (bola no ar)
@@ -156,26 +168,30 @@ Juiz.................: Rillion                     <-- Nome do juiz da partida
 -------------------------------------------------
 Jogador à esquerda...: Ludika                      <-- Jogador posicionado à esquerda do juiz
 Pontuação............: 15718 pts                   <-- Pontuação bruta acumulada do jogador à esquerda
-Velocidade Média.....: 69 Km/h                     <-- Velocidade média (simples/quadrática) do jogador à esquerda
-
+<!--
+Velocidade Média.....: 69 Km/h                     <-- Velocidade média (simples) do jogador à esquerda
+-->
 Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
 Golpes DIR [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de direita mais fortes => média simples
 -------------------------------------------------
 Jogador à direita....: Elton                       <-- Jogador posicionado à direita do juiz
 Pontuação............: 14063 pts                   <-- Pontuação bruta acumulada do jogador à direita
-Velocidade Média.....: 74 Km/h                     <-- Velocidade média (simples/quadrática) do jogador à direita
+<!--
+Velocidade Média.....: 74 Km/h                     <-- Velocidade média (simples) do jogador à direita
+-->
 
 Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
 Golpes DIR [ 100 100  87  84  84  79  79 ] => 87   <-- golpes de direita mais fortes => média simples
 -------------------------------------------------
-(v1.72 / 800cm / 180s / pot=0 / equ=1 / cont=30 / max=30)    <-- Rodapé de configurações do jogo
+(v1.72/800cm/180s/pot=0/equ=1/cont=30/fim=18/max=85)    <-- Rodapé de configurações do jogo
     \-- versão do software
-           \-- distância entre os ateltas
-                   \-- tempo máximo de apresentação
-                           \-- pontuação de potência (0=desligada, 1=ligada)
-                                   \-- pontuação de equilíbrio
-                                            \-- velocidade máxima a detectar
-
+         \-- distância entre os ateltas
+               \-- tempo máximo de apresentação
+                     \-- pontuação de potência (0=desligada, 1=ligada)
+                           \-- pontuação de equilíbrio
+                                 \-- desconto por queda (30=3%)
+                                        \-- máximo de quedas
+                                              \-- velocidade máxima a detectar
 ```
 - Relatório (ao final da apresentação)
 
@@ -228,7 +244,7 @@ FINAL:       6665                       <-- Pontuação final da dupla
 ### Aparelho marcador:
 
 - Nova apresentação:
-    - Pressione o botão do meio e em seguida o da direita por 5 segundos.
+    - Pressione o botão do meio e em seguida o da direita por 3 segundos.
     - Resposta: um som médio de dois segundos.
 - Início de sequência:
     - Pressione o botão do meio por um segundo, até escutar um som.
@@ -243,14 +259,15 @@ FINAL:       6665                       <-- Pontuação final da dupla
     - Pressione o botão do meio por um segundo, até escutar um som.
     - Resposta: três sons cada vez mais graves por meio segundo.
 - Fim da apresentação:
-    - Automático, quando o tempo do cronômetro expirar ou após a 25a queda.
+    - Automático, quando o tempo do cronômetro expirar ou após atingido 
+    o limite de quedas.
     - Resposta: um som grave por dois segundos.
 - Desfazer última sequência:
-    - Pressione o botão do meio e em seguida o da esquerda por 5 segundos.
+    - Pressione o botão do meio e em seguida o da esquerda por 3 segundos.
     - Resposta: três sons cada vez mais agudos por meio segundo.
 - Reconfiguração de fábrica:
     - Pressione o botão do meio e em seguida os da esquerda e direita por
-      5 segundos.
+      3 segundos.
     - Resposta: um som médio de dois segundos.
     - **Em princípio, esse procedimento nunca deverá ser necessário.**
 

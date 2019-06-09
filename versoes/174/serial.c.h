@@ -90,10 +90,6 @@ void Serial_Score (void) {
     Serial.print(G.total);
     Serial.println(F(" pts"));
     
-
-    
-
-
     //OK - PLACAR INDIVIDUAL
     Serial.println(F("-------------------------------------------------"));
     sprintf_P(STR, PSTR("%10S: "), F("Jogador à esquerda..."));
@@ -176,8 +172,7 @@ void Serial_Score (void) {
     //fim
 
     //sprintf_P(STR, PSTR("(v%d.%d / %dcm / %ds / pot=%d / equ=%d / cont=%d / max=%d)"),
-     sprintf_P(STR, PSTR("(v%d.%d.%d/%dcm/%ds/pot=%d/equ=%d/cont=%d/fim=%d/max=%d)"),
-                MAJOR, MINOR, REVISION,
+     sprintf_P(STR, PSTR("(CFG:%dcm/%ds/pot=%d/equ=%d/cont=%d/fim=%d/max=%d)"),
                 S.distancia,
                 (int)(S.timeout/1000),
                 (int)S.potencia,

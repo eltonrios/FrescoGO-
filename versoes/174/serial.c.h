@@ -179,7 +179,8 @@ void Serial_Score (void) {
                 (int)S.equilibrio,
                 (int)CONT_PCT,
                 (int)ABORT_FALLS,
-                (int)S.maxima);
+                (int)S.maxima,
+                (int)S.sensibilidade);
     Serial.println(STR);
     Serial.println(F(" "));
 }
@@ -362,6 +363,8 @@ _COMPLETE:
         S.equilibrio = 0;
     } else if (strncmp_P(CMD, PSTR("maxima "), 7) == 0) {
         S.maxima = atoi(&CMD[7]);
+    } else if (strncmp_P(CMD, PSTR("sensibilidade "), 13) == 0) {
+        S.sensibilidade = atoi(&CMD[7]);        
 /*
     } else if (strncmp_P(CMD, PSTR("continuidade "), 13) == 0) {
         S.continuidade = atoi(&CMD[13]);

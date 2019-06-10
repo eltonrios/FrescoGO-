@@ -253,7 +253,6 @@ void Serial_Log (void) {
     }
     //Serial.println();
  
-    u32 bests[2][2] = { {0,0}, {0,0} };
     if (S.potencia) {
         for (int i=0; i<2; i++) {
             for (int j=0; j<2; j++) {
@@ -263,14 +262,13 @@ void Serial_Log (void) {
                     if (!S.potencia) {
                         v = POT_VEL;
                     }
-                //int avg = sum / HITS_BESTS;
-                //bests[i][j] = avg*avg * POT_BONUS * HITS_BESTS;
+                    sum += v;
                 }
-                sum += v*v*POT_BONUS;
+                int avg = sum / HITS_BESTS;
+                bests[i][j] = avg*avg * POT_BONUS * HITS_BESTS;
             }
-            bests[i][j] = sum;
         }
-    }
+}
  
     u32 p0 = ps[0] + bests[0][0] + bests[0][1];
     u32 p1 = ps[1] + bests[1][0] + bests[1][1];

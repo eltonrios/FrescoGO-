@@ -173,7 +173,7 @@ void Serial_Score (void) {
     //fim
 
     //sprintf_P(STR, PSTR("(v%d.%d / %dcm / %ds / pot=%d / equ=%d / cont=%d / max=%d)"),
-     sprintf_P(STR, PSTR("(CFG:%dcm/%ds/pot=%d/equ=%d/cont=%d/fim=%d/max=%d/sens=%d)"),
+     sprintf_P(STR, PSTR("(CFG:%dcm/%ds/pot%d/equ%d/cont%d/fim%d/max%d/sens%d)"),
                 S.distancia,
                 (int)(S.timeout/1000),
                 (int)S.potencia,

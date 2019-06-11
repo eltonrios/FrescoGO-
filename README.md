@@ -279,6 +279,16 @@ FINAL:       6665                       <-- Pontuação final da dupla
     - Trocar `Buffer size` para `Unlimited`.
     - Habilitar `Clear input on send`.
     - Habilitar `Keep screen on when connected`.
+    
+
+![Android App](images/app.jpg "Android App")
+![Conexão USB](images/connected.jpg "Conexão USB")
+![Configurações](images/app1.jpg "Configurações 1/5")
+![Configurações](images/app2.jpg "Configurações 2/5")
+![Configurações](images/app3.jpg "Configurações 3/5")
+![Configurações](images/app4.jpg "Configurações 4/5")
+![Configurações](images/app5.jpg "Configurações 5/5")
+
 - Conexão (sempre que abrir o aplicativo):
     - Conectar o aparelho ao celular via cabo USB.
     - Tocar no ícone com dois cabos desconectados no centro superior direito da
@@ -397,15 +407,6 @@ FINAL:       6665                       <-- Pontuação final da dupla
             - Selecione o arquivo a ser anexado, ex.:  `serial_20190602_160522.txt`
             - Selecione `Enviar`
                 - Confirme
-                
-
-![Android App](images/app.jpg "Android App")
-![Conexão USB](images/connected.jpg "Conexão USB")
-![Configurações](images/app1.jpg "Configurações 1/5")
-![Configurações](images/app2.jpg "Configurações 2/5")
-![Configurações](images/app3.jpg "Configurações 3/5")
-![Configurações](images/app4.jpg "Configurações 4/5")
-![Configurações](images/app5.jpg "Configurações 5/5")
 
 -------------------------------------------------------------------------------
 

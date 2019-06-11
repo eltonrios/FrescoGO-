@@ -315,36 +315,89 @@ FINAL:       6665                       <-- Pontuação final da dupla
         - `tempo SEGS`
             - altera o tempo total das apresentações para `SEGS`, que deve ser
               um número em segundos
+            - Exemplo:
+                - `tempo 300`
+                - altera o tempo de apresentação para 5 minutos
         - `distancia CMS`
             - altera a distância das apresentações para `CMS`, que deve ser um
               número em centímetros
+            - Exemplo:
+                - `distancia 800`
+                - altera a distância para 8 metros
         - `maxima VEL`
             - altera a velocidade máxima a ser considerada para `VEL`, que deve
               ser um número em kmh (bolas acima de `VEL` serão consideradas
               como `VEL`)
+            - Exemplo:
+                - `maxima 90`
+                - bolas acima de 90 kmh serão interpretadas como 90 kmh
         - `potencia SIM/NAO`
             - liga ou desliga a pontuação de potência (`nao=desligada`, `sim=ligada`)
             Obs: No rodapé de configurações irá aparecer pot=0 quando desligada, 
             e pot=1 quando ligada.
             - caso desligada, a apresentação já iniciará com as 7 bolas de
-              esquerda e direita premarcadas a 50km/h (e nunca serão modificadas)
+              esquerda e direita premarcadas a 50kmh (e nunca serão modificadas)
+            - Exemplo:
+                - `potencia sim`
+                - habilita a pontuação de potência
         - `equilibrio SIM/NAO`
-            - liga ou desliga a pontuação de equilíbrio (`nao=desligada`, `sim=ligada`)
-            Obs: No rodapé de configurações irá aparecer equ=0 quando desligada, 
-            e equ=1 quando ligada.
-<!--
-        - `continuidade PCT`
-            - altera o percentual de perda por queda de bola para `PCT`, que
-              deve ser um número
--->
+            - liga ou desliga a pontuação de equlíbrio (`nao=desligada`, `sim=ligada`)
+            - Exemplo:
+                - `equilibrio nao`
+                - desabilita a pontuação de equilibrio
         - `esquerda NOME`
             - altera o nome do atleta à esquerda para `NOME`, que deve ter até
               15 caracteres
+            - Exemplo:
+                - `esquerda Maria`
+                - altera o nome do atleta à esquerda para *Maria*
         - `direita NOME`
             - altera o nome do atleta à direita para `NOME`, que deve ter até
               15 caracteres
+            - Exemplo:
+                - `direita Joao`
+                - altera o nome do atleta à direita para *Joao*
         - `juiz NOME`
             - altera o nome do juiz para `NOME`, que deve ter até 15 caracteres
+            - Exemplo:
+                - `juiz Arnaldo`
+                - altera o nome do juiz para *Arnaldo*
+        - `sensibilidade MS`
+            - altera o tempo mínimo para detectar um backhand para `MS`, que
+              deve ser um número em milisegundos
+            - Exemplo:
+                - `sensibilidade 180`
+                - altera a sensibilidade para 180 milisegundos
+                
+
+- Envio de relatórios:
+    <a name="envio-de-relatorios"></a>
+    - No aplicativo `Serial USB Terminal`:
+        - Aguarde o término da apresentação
+        - Aperte na lata de lixo no canto superior direito para apagar a tela
+        - Digite `relatorio`
+            - Aguarde o término da operação
+        - Aperte nos 3 pontinhos no canto superior direito
+            - Selecione `Save Data`
+                - Vai aparecer uma mensagem tal como `Saved serial_20190602_160522.txt`
+    - No `WhatsApp`:
+        - Selecione o contato a enviar o relatório
+        - Aperte no clipe para anexar um arquivo
+            - Selecione `Documento`
+        - Aperte em `Procurar outros documentos...`
+        - Aperte nos 3 pontinhos no canto superior direito
+            - Selecione `Mostrar armazenamento interno`
+                - (Esse procedimento só é necessário uma vez)
+        - Aperte nas 3 barrinhas no canto superior esquerdo
+            - Selecione o modelo do seu celular, ex.: `Moto E(4)`
+            - Selecione `Android`
+            - Selecione `data`
+            - Selecione `de.kai_morich.serial_usb_terminal`
+            - Selecione `files`
+            - Selecione o arquivo a ser anexado, ex.:  `serial_20190602_160522.txt`
+            - Selecione `Enviar`
+                - Confirme
+                
 
 ![Android App](images/app.jpg "Android App")
 ![Conexão USB](images/connected.jpg "Conexão USB")
@@ -392,11 +445,35 @@ FINAL:       6665                       <-- Pontuação final da dupla
       as medições em 10%).
         - Fonte: <https://www.stalkerradar.com/stalker-speed-sensor/faq/stalker-speed-sensor-FAQ.shtml>
 
+-------------------------------------------------------------------------------
+
 - Por quê as velocidades são elevadas ao quadrado?
     - Para bonificar os golpes mais potentes.
       Quanto maior a velocidade, maior ainda será o quadrado dela.
-      Uma bola a 50 kmh vale `50x50=2500`, uma a 70 kmh vale `70x70=4900`,
+      Um golpe a 50 kmh vale `50x50=2500`, uma a 70 kmh vale `70x70=4900`,
       praticamente o dobro (25 vs 49 pontos, após a divisão por 100).
+
+- Qual é o objetivo do quesito Potência?
+    - Ao bonificar os 7 golpes mais velozes tanto de esquerda quanto de
+      direita, a regra incentiva que o atleta ataque acima do seu limite.
+      Os 7 golpes correspondem a mais ou menos 10% dos ataques de um atleta em
+      uma apresentação de 3 minutos (20% considerando esquerda e direita).
+<!--
+    - E por quê a regra não considera todos os 7 golpes mais velozes (no lugar
+      de considerar apenas o 7o)?
+        - Para minimizar a imprecisão da marcação do juiz.
+          É possível que o juiz acelere a marcação de alguns golpes, mas é
+          pouco provável que isso afete sensivelmente a 7a bola mais veloz.
+-->
+
+- Por quê algumas apresentações já iniciam com uma pontuação que eu não consigo
+  zerar?
+    - Quando a pontuação de Potência está desligada (`potencia nao`), a regra
+      assume um valor fixo de 50 kmh para todos os 7 golpes mais velozes de
+      esquerda e de direita **que já são contabilizados no início da
+      apresentação**.
+    - Isso é feito para evitar os dois modos (ligado e desligado) fiquem com
+      pontuações próximas.
 
 - Tem como o juiz "roubar"?
     - Ao atrasar a marcação de um golpe "A", consequentemente o golpe "B"
@@ -446,10 +523,10 @@ FINAL:       6665                       <-- Pontuação final da dupla
 
 - Como eu posso contribuir?
     - Adotando o sistema no dia a dia da sua arena.
-        - Principalmente com jogadores iniciantes.
+        - Principalmente com atletas iniciantes.
     - Promovendo competições.
     - Produzindo vídeos.
-    - **Enviando os relatórios dos jogos para nós.**
+    - **Enviando os relatórios das apresentações para nós.**
 
 <!--
 - Como eu posso contribuir financeiramente?

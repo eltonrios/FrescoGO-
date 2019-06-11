@@ -59,8 +59,9 @@ void Serial_Score (void) {
 
     //OK - PONTUAÇÃO BRUTA 
     Serial.println(F("-------------------------------------------------"));
-    sprintf_P(STR, PSTR("Pontuação Bruta......:%5ld"), ((G.ps[0]/100)+(G.ps[1]/100))/2);
+    sprintf_P(STR, PSTR("%10S: "), F("Pontuação Bruta......"));
     Serial.print(STR);
+    Serial.print((G.ps[0]/100)+(G.ps[1]/100))/2);    
     Serial.println(F(" pts"));
 
     //OK – EQUILÍBRIO (PTS PERDIDOS)

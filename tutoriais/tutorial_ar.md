@@ -9,11 +9,11 @@
 -----------------------------------------------------------------------------
 Passo 1. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;
 Passo 2. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;
+Passo 3. Abra o Bloco de Notas (será usado para conversa com o suporte);
+Passo 4. Informe sua ID e senha para ser usado pelo suporte remoto;
 
 ![TeamViewer](images/TeamViewerQS.png "TeamViewer")
 
-Passo 3. Abra o Bloco de Notas (será usado para conversa com o suporte);
-Passo 4. Informe sua ID e senha para ser usado pelo suporte remoto;
 Passo 5. Pronto, agora seu PC está pronto para ser acessado remotamente, conecte o seu dispositivo *FrescoGO* em uma porta USB e acompanhe a atuação do suporte que irá interagir com você através do Bloco de Notas;
 
 

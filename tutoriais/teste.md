@@ -1,7 +1,7 @@
 #  TUTORIAL (v1.0)
 ## Preparando o ambiente:
 ---------------------------------------------------------------------
-1. Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* com o cabo adaptador de USB normal para Mini USB (é aquele cabo azul que acompanhá o dispositivo);
+1. Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* (com aquele cabo azul que acompanhá o dispositivo);
 2. Baixe o software IDE Arduino, no endereço https://www.arduino.cc/en/Main/Software conforme o seu sistema operacional;
 3. Faça a instalação do mesmo;
 4. Após a instalação, baixe o driver para seu dispositivo em
@@ -29,3 +29,8 @@ Obs: http://blogdarobotica.com/instalando-driver-serial-para-arduinos-com-chip-c
 4. Se até aí tudo correu bem, só falta agora enviar para seu dispositivo a nova programação, e para isso você vai clicar no icone de uma seta para a direita, que se encontra abaixo da opção "Arquivo", no menu principal;
 5. Vai aparecer a palavra "Carregando..." na barra azul logo abaixo dos códigos, aguarde o processo ser concluído (normalmente dura de 15 a 30 segundos); 
 6. Quando aparecer a palavra "Carregado." seu dispositivo já estará atualizado, podendo ser desconectado;
+
+## Dicas:
+---------------------------------------------------------------------
+a. Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
+b. 

@@ -40,6 +40,6 @@ https://www.driverscape.com/download/usb-serial-ch340; ou https://drive.google.c
 
 ## *Dicas:*
 ---------------------------------------------------------------------
-a. Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
-b. 
+**a.** Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
+
 

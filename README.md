@@ -154,7 +154,7 @@ A seguir são explicados os formatos de exibição do resultado da apresentaçã
             Ludika / Elton                         <-- nome dos atletas
 -------------------------------------------------
 Pontuação Bruta......:14890 pts                    <-- Média simples da pontuação bruta da dupla
-Equilibrio...........: 4294966717 pts (-)          <-- Desconto de equilíbrio
+Equilibrio...........: 429 pts (-)                 <-- Desconto de equilíbrio
 Quedas...............: 2320 pts (-)                <-- Desconto pelas quedas
 Velocidade Média.....: 69 km/h                     <-- Velocidade Média (simples)
 PONTUAÇÃO FINAL......: 12657 pts                   <-- Pontuação após aplicadas as penalizações acima

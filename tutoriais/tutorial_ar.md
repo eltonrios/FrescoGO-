@@ -11,7 +11,7 @@ Passo 1. Execute o arquivo com um duplo-clique para abrir. Não é necessário t
 Passo 2. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;
 
 ![TeamViewer](images/TeamViewerQS.png "TeamViewer")
-
+![TeamViewer](images/TeamViewerQS.png "TeamViewer")
 
 
 

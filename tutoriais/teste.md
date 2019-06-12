@@ -1,6 +1,10 @@
 #  TUTORIAL (v1.0)
 
 1. Crie em seu computador uma pasta denominada **frescoGO** e baixe para a mesma os arquivos em anexo neste email;
+<https://github.com/eltonrios/FrescoGO_Up/software/frescobol.ino>
+<https://github.com/eltonrios/FrescoGO_Up/software/serial.c.h> 
+<https://github.com/eltonrios/FrescoGO_Up/software/frescobol.ino> 
+<https://github.com/eltonrios/FrescoGO_Up/software/frescobol.ino> 
 <https://github.com/eltonrios/FrescoGO_Up/software/frescobol.ino> 
  
 2. Entre nesta pasta e dê dois cliques no arquivo "frescobol.ino" e isso fará com que seja aberto o IDE Arduino e todo o pacote será carregado automaticamente;

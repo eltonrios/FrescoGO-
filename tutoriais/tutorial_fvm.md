@@ -1,5 +1,5 @@
 #  TUTORIAL  (v1.0) 
-Atualize seu dispositivo - Faça você mesmo
+# Atualize seu dispositivo - Faça você mesmo
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
 ---------------------------------------------------------------------

@@ -1,7 +1,20 @@
 #  TUTORIAL (v1.0)
 ## Preparando o ambiente:
 ---------------------------------------------------------------------
-
+1. Você vai precisar de um computador;
+2. Dispositivo *FrescoGO* com o cabo adaptador de USB normal para Mini USB (é aquele cabo azul que acompanhá o dispositivo);
+3. Baixe o software IDE Arduino, no endereço https://www.arduino.cc/en/Main/Software conforme o seu sistema operacional
+4. Faça a instalação do mesmo;
+5. Após a instalação, baixe o driver para seu dispositivo em
+https://www.driverscape.com/download/usb-serial-ch340 
+https://drive.google.com/file/d/0B2YXepPR2qlAdkR6eXNDMVU3a0E/view?usp=sharing
+6. Após baixar e clicar duas vezes logo se apresentará a tela abaixo:
+![Foto do marcador](images/device.jpg "Foto do Aparelho")
+![Foto do marcador](http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png "Foto do Aparelho")
+http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png
+.Basta apenas clicar na opção Install e pronto! 
+. Conecte seu FrescoGo à porta USB do computador e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
+Obs: http://blogdarobotica.com/instalando-driver-serial-para-arduinos-com-chip-ch340/
 
 ## Efetuando atualização:
 ---------------------------------------------------------------------

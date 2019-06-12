@@ -3,6 +3,7 @@
 -----------------------------------------------------------------------------
 1. *TeamViewer Quick Support* instalado no computador;
     Baixe o aplicativo aqui: https://br.ccm.net/download/baixaki-13879-teamviewer-quicksupport?n=1#13879
+    
 2. Conexão com a internet.
 
 ## Preparando o ambiente:

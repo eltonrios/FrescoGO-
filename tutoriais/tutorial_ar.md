@@ -1,4 +1,6 @@
-# Tutorial - Atualização por acesso remoto (Versão 1.0)
+#  TUTORIAL  (v1.0) 
+# Atualize seu dispositivo - Acesso remoto
+---------------------------------------------------------------------
 ## *Pré-requisitos:*
 -----------------------------------------------------------------------------
 **1.** *TeamViewer Quick Support* instalado no computador;

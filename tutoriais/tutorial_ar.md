@@ -7,5 +7,5 @@
 
 ## Preparando o ambiente:
 -----------------------------------------------------------------------------
-Passo 1. Acesse o TechTudo Downloads e baixe o TeamViewer Quick Support;
+Passo 1. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;
 Passo 2. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;

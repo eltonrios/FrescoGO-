@@ -9,3 +9,5 @@
 -----------------------------------------------------------------------------
 Passo 1. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;
 Passo 2. Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;
+
+![Foto do marcador](images/TeamViewerQS.png "Foto do Aparelho")

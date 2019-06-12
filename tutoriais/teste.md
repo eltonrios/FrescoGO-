@@ -9,9 +9,8 @@
 https://www.driverscape.com/download/usb-serial-ch340 
 https://drive.google.com/file/d/0B2YXepPR2qlAdkR6eXNDMVU3a0E/view?usp=sharing
 6. Após baixar e clicar duas vezes logo se apresentará a tela abaixo:
-![Foto do marcador](images/device.jpg "Foto do Aparelho")
 ![Foto do marcador](http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png "Foto do Aparelho")
-http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png
+
 .Basta apenas clicar na opção Install e pronto! 
 . Conecte seu FrescoGo à porta USB do computador e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
 Obs: http://blogdarobotica.com/instalando-driver-serial-para-arduinos-com-chip-ch340/

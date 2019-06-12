@@ -301,9 +301,9 @@ void Serial_Log (void) {
     //sprintf_P(STR, PSTR(">>> %ld x %d%% = %ld"), total/100, pct, total*pct/10000);
     sprintf_P(STR, PSTR("Pontuação Bruta..: %5ld pts"), avg/100);
     Serial.println(STR);
-    sprintf_P(STR, PSTR("Equilibrio.......:  %2ld pts (-)"), (S.equilibrio ? (avg/100)-(total/100) : 0));
+    sprintf_P(STR, PSTR("Equilibrio.......: %5ld pts (-)"), (S.equilibrio ? (avg/100)-(total/100) : 0));
     Serial.println(STR);
-    sprintf_P(STR, PSTR("Quedas...........:  %2ld pts (-)"), total*pct/100000);
+    sprintf_P(STR, PSTR("Quedas...........: %5ld pts (-)"), total*pct/100000);
     Serial.println(STR);
     sprintf_P(STR, PSTR("Golpes...........:  "));
     Serial.print(STR);

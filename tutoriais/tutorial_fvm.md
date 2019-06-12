@@ -1,5 +1,5 @@
 #  TUTORIAL
-## *- Atualize seu dispositivoFaça você mesmo (v1.0)*
+## *Atualize seu dispositivo - Faça você mesmo (v1.0)*
 ## Preparando o ambiente:
 ---------------------------------------------------------------------
 1. Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* (com aquele cabo azul que acompanhá o dispositivo);

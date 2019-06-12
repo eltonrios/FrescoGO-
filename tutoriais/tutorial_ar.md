@@ -13,3 +13,4 @@ Passo 2. Execute o arquivo com um duplo-clique para abrir. Não é necessário t
 ![TeamViewer](images/TeamViewerQS.png "TeamViewer")
 
 
+

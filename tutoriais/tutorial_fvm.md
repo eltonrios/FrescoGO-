@@ -2,7 +2,7 @@
 ## *Atualize seu dispositivo - Faça você mesmo*
 ## Preparando o ambiente:
 ---------------------------------------------------------------------
-1. Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* (com aquele cabo azul que acompanhá o dispositivo);
+1. Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* (com aquele cabo azul que acompanha o dispositivo);
 2. Baixe o software IDE Arduino, no endereço https://www.arduino.cc/en/Main/Software conforme o seu sistema operacional;
 3. Faça a instalação do mesmo;
 4. Após a instalação, baixe o driver para seu dispositivo em

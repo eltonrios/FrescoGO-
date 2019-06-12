@@ -9,7 +9,6 @@ void Serial_Hit (u32 kmh, bool is_back) {
  
 void Serial_Score (void) {
     u32 ps[2] = {0,0};
-    //u32 bests[2][2] = { {0,0}, {0,0} };
     u32 bests[2][2] = { {0,0}, {0,0} };
     u32 p0 = ps[0] + bests[0][0] + bests[0][1];
     u32 p1 = ps[1] + bests[1][0] + bests[1][1];
@@ -59,6 +58,7 @@ void Serial_Score (void) {
 
     //OK - PONTUAÇÃO BRUTA 
     Serial.println(F("-------------------------------------------------"));
+    //sprintf_P(STR, PSTR("Pontuação Bruta......:%5ld"), ((G.ps[0]/100)+(G.ps[1]/100))/2);
     sprintf_P(STR, PSTR("%10S: "), F("Pontuação Bruta......"));
     Serial.print(STR);
     Serial.print(((G.ps[0]/100)+(G.ps[1]/100))/2);    
@@ -298,18 +298,30 @@ void Serial_Log (void) {
 */
     Serial.println(F("-----------------------------------------------"));
     u32 pct = min(990, Falls()*CONT_PCT);
-    //sprintf_P(STR, PSTR(">>> %ld x %d%% = %ld"), total/100, pct, total*pct/10000);
-    sprintf_P(STR, PSTR("Pontuação Bruta..: %5ld pts"), avg/100);
-    Serial.println(STR);
-    sprintf_P(STR, PSTR("Equilibrio.......: %5ld pts (-)"), (S.equilibrio ? (avg/100)-(total/100) : 0));
-    Serial.println(STR);
-    sprintf_P(STR, PSTR("Quedas...........: %5ld pts (-)"), total*pct/100000);
-    Serial.println(STR);
-    sprintf_P(STR, PSTR("Golpes...........:  "));
+    //Pontuação Bruta
+    sprintf_P(STR, PSTR("%8S "), F("Pontuação Bruta..: "));
+    Serial.print(STR);
+    Serial.print(avg/100);
+    Serial.println(F(" pts"));
+    //Equilibrio
+    sprintf_P(STR, PSTR("%8S "), F("Equilibrio.......: "));
+    Serial.print(STR);
+    Serial.print(S.equilibrio ? (avg/100)-(total/100) : 0);    
+    Serial.println(F(" pts (-)"));
+    //Quedas
+    sprintf_P(STR, PSTR("%8S "), F("Quedas...........: "));
+    Serial.print(STR);
+    Serial.print(total*pct/100000);    
+    Serial.println(F(" pts (-)"));
+    //Golpes
+    sprintf_P(STR, PSTR("%8S "), F("Golpes...........: "));
     Serial.print(STR);
     Serial.println(G.hits);
-    sprintf_P(STR, PSTR("Pontuação Final..: %5ld pts"), total*(1000-pct)/100000);
-    Serial.println(STR);
+    //Pontuação Líquida
+    sprintf_P(STR, PSTR("%8S "), F("Pontuação Final..: "));
+    Serial.print(STR);
+    Serial.print(total*(1000-pct)/100000); 
+    Serial.println(F(" pts"));       
     Serial.println(F("-------------------------------------------------"));
 }
  

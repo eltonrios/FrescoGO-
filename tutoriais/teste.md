@@ -1,5 +1,5 @@
 #  TUTORIAL (v1.0)
-
+---------------------------------------------------------------------
 1. Crie em seu computador uma pasta denominada "**frescoGO**" e baixe para a mesma os arquivos abaixo:
 <https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino>
 <https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h> 

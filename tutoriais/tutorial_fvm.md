@@ -30,13 +30,11 @@ Opção alternativa para esse driver pode ser encontrada [aqui](https://drive.go
 ---------------------------------------------------------------------
 **1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo:
 
-[frescobol.ino](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino)
-[serial.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h)
-[pt.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h)
-
-[tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h)
-
-[pitches.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h) 
+> [frescobol.ino](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino)
+> [serial.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h)
+> [pt.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h)
+> [tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h)
+> [pitches.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h) 
 
 Obs: Caso queira optar pela versão original, utilize os links abaixo:
 [frescobol.ino](https://github.com/frescogo/frescogo/blob/master/software/frescobol.ino)

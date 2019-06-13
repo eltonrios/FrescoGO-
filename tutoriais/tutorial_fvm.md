@@ -53,7 +53,8 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos.
 
 
-
+<!-- Formato de texto: https://guides.github.com/features/mastering-markdown/#examples
+-->
 1. # GITHUB Github 
 2. ## GITHUB Github
 3. **GITHUB Github**
@@ -63,6 +64,78 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 7. *GITHUB Github* 
 8. *_GITHUB Github_*
 
+# This is an <h1> tag
+## This is an <h2> tag
+###### This is an <h6> tag
+ *This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+_You **can** combine them_
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+  1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
+http://github.com - automatic!
+[GitHub](http://github.com)
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
+I think you should use an
+`<addr>` element here instead.
+
+Task Lists
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+
+You can also simply indent your code by four spaces:
+
+    function fancyAlert(arg) {
+      if(arg) {
+        $.facebox({div:'#foo'})
+      }
+    }
+    
+Here’s an example of Python code without syntax highlighting:
+
+def foo():
+    if not bar:
+        return True
+        
+Tables
+You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+Any number that refers to an Issue or Pull Request will be automatically converted into a link.
+
+#1
+mojombo#1
+mojombo/github-flavored-markdown#1
+
+Strikethrough
+Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 without learning Markdown syntax. In addition to Markdown formatting like bold and italic styles and creating headers, links, and lists, the toolbar includes GitHub-specific features such as @mentions, task lists, and links to issues and pull requests.
 
 

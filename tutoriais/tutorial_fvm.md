@@ -1,9 +1,9 @@
-#  TUTORIAL  (v1.0) 
-# Atualize seu dispositivo - Faça você mesmo #
+TUTORIAL  (v1.0) 
+Atualize seu dispositivo - Faça você mesmo 
 
 
 
-**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo_** *FrescoGO* **_na atualização do firmware instalado no mesmo._**
+O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo *FrescoGO* na atualização do firmware instalado no mesmo.
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
 ---------------------------------------------------------------------

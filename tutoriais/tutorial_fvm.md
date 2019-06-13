@@ -53,13 +53,14 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos.
 
-*Every* 
+
 1. **comment field**
 2. # on GitHub 
 3. ## contains a text
 4. ###### formatting toolbar, 
 5. _allowing you_
 6. **_to format your text_** 
+7. *Every* 
 
 without learning Markdown syntax. In addition to Markdown formatting like bold and italic styles and creating headers, links, and lists, the toolbar includes GitHub-specific features such as @mentions, task lists, and links to issues and pull requests.
 

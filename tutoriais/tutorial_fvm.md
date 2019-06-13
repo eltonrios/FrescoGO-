@@ -136,6 +136,8 @@ mojombo/github-flavored-markdown#1
 
 Strikethrough
 Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
+
+
 without learning Markdown syntax. In addition to Markdown formatting like bold and italic styles and creating headers, links, and lists, the toolbar includes GitHub-specific features such as @mentions, task lists, and links to issues and pull requests.
 
 

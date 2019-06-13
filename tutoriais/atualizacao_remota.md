@@ -12,7 +12,6 @@
 **3.** *Você verá tudo o que acontece pois todas as ações remotas são visíveis em sua tela, nada é feito sem que você tenha visualização, podendo fechar o programa no momento que desejar.*
 ##### Video-aula: https://www.youtube.com/watch?v=u7jbKk6CK4I
 
----------------------------------------------------------------------
 ## *Pré-requisitos:*
 -----------------------------------------------------------------------------
 **1.** *TeamViewer Quick Support* instalado no computador;

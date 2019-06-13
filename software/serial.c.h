@@ -323,7 +323,7 @@ void Serial_Log (void) {
     Serial.print(total*(1000-pct)/100000); 
     Serial.println(F(" pts"));       
     Serial.println(F("-------------------------------------------------"));
-    Serial.print(F("= FrescoGO! by EGR (versao "));
+    Serial.print(F("= FrescoGO! (versao "));
     Serial.print(MAJOR);
     Serial.print(".");
     Serial.print(MINOR);

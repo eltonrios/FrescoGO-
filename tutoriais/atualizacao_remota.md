@@ -11,6 +11,13 @@ Dúvidas quanto ao uso do TeamViewer:
 3. Você verá tudo o que acontece, pois tudo se passa na tela, nada é feito sem que você tenha visualização, 
 sendo assim bastaria fechar o programa.
 ```
+**Dúvidas quanto ao uso do TeamViewer:**
+
+1. O TeamViewer é uma ferramenta amplamente utilizada, no mundo inteiro, para o serviço de suporte remoto;
+2. Não há como acessar sua máquina sem permissão;
+3. Você verá tudo o que acontece, pois tudo se passa na tela, nada é feito sem que você tenha visualização, 
+sendo assim bastaria fechar o programa.
+
 ##### Video-aula: https://www.youtube.com/watch?v=u7jbKk6CK4I
 
 ---------------------------------------------------------------------

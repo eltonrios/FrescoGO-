@@ -3,6 +3,17 @@
 **_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo FrescoGO na atualização do firmware do mesmo._**
 
 ---------------------------------------------------------------------
+**Considerações iniciais:**
+
+**1.** *Se você não possui conhecimentos de instalação de aplicativos e drivers, bem como na configuração de hardware, sugiro que opte por realizar esta fase de _preparação do ambiente_ utilizando o [SUPORTE REMOTO](https://github.com/eltonrios/FrescoGO_Up/blob/master/tutoriais/atualizacao_remota.md);*
+
+**2.** *Não há como acessar sua máquina sem sua permissão;*
+
+**3.** *Você verá tudo o que acontece pois todas as ações remotas são visíveis em sua tela, nada é feito sem que você tenha visualização, podendo fechar o programa no momento que desejar.*
+
+##### Video-aula: https://www.youtube.com/watch?v=u7jbKk6CK4I
+
+---------------------------------------------------------------------
 ## *Preparando o ambiente:*
 ---------------------------------------------------------------------
 **1.** Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* (com aquele cabo azul que acompanha o dispositivo);

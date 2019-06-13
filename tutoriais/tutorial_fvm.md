@@ -34,6 +34,13 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 <https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h> 
 <https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h> 
 <https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h> 
+
+Caso opte pela versão original, utilize os links abaixo:
+1. https://github.com/frescogo/frescogo/blob/master/software/frescobol.ino
+2. https://github.com/frescogo/frescogo/blob/master/software/serial.c.h
+3. https://github.com/frescogo/frescogo/blob/master/software/pt.c.h
+4. https://github.com/frescogo/frescogo/blob/master/software/tv.c.h
+5. https://github.com/frescogo/frescogo/blob/master/software/pitches.h
  
 **2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
 
@@ -50,7 +57,6 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 **a.** Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
 
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos.
-
 
 <!-- Formato de texto: https://guides.github.com/features/mastering-markdown/#examples
 

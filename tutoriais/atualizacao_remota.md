@@ -21,6 +21,8 @@
  
 **2.** Conexão com a internet.
 
+**3.** Contato com o suporte (através do grupo FrescoGO! no whattsapp).
+
 ## *Preparando o ambiente:*
 -----------------------------------------------------------------------------
 **Passo 1.**  Execute o arquivo com um duplo-clique para abrir. Não é necessário ter privilégios de administrador do sistema;

@@ -7,7 +7,7 @@
 ---------------------------------------------------------------------
 **1.** Você vai precisar ter em mãos um computador e o dispositivo *FrescoGO* (com aquele cabo azul que acompanha o dispositivo);
 
-**2.** Baixe o software IDE Arduino correspondente ao seu sistema operacional, clicando [aqui] (https://www.arduino.cc/en/Main/Software) ;
+**2.** Baixe o software IDE Arduino correspondente ao seu sistema operacional, clicando [aqui](https://www.arduino.cc/en/Main/Software) ;
 
 **3.** Faça a instalação do mesmo;
 

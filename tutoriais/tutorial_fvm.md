@@ -54,9 +54,10 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos.
 
 
-1. **GITHUB Github**
-2. # GITHUB Github 
-3. ## GITHUB Github
+
+1. # GITHUB Github 
+2. ## GITHUB Github
+3. **GITHUB Github**
 4. ###### GITHUB Github 
 5. _GITHUB Github_
 6. **_GITHUB Github_** 

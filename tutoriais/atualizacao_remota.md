@@ -1,6 +1,6 @@
 ###### _TUTORIAL  (v1.0)_
 # Atualize seu dispositivo - Acesso remoto 
-**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo FrescoGO na atualização do firmware do mesmo._**
+**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo FrescoGO na atualização do firmware do mesmo, utilizando suporte remoto._**
 
 ---------------------------------------------------------------------
 ## *Pré-requisitos:*

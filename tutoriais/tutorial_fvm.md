@@ -15,11 +15,11 @@
 
 Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0VtVliTP9X;
 
-**5.** Após baixar e clicar duas vezes logo se apresentará a tela abaixo:
+**5.** Após baixar e clicar duas vezes irá abrir a janela abaixo:
 
 ![Instalador](http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png "Setup")
 
-**6.** Basta apenas clicar na opção Install e pronto;
+**6.** Clique na opção Install;
 
 **7.** Conecte seu FrescoGo à porta USB do computador e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
 

@@ -53,6 +53,7 @@ Obs: Os links para os arquivos da versão original podem ser encontrados no fina
 
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos.
 
+
 ## *Arquivos da versão original:*
 ---------------------------------------------------------------------
 * [frescobol.ino](https://github.com/frescogo/frescogo/blob/master/software/frescobol.ino)

@@ -5,6 +5,10 @@
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
 ---------------------------------------------------------------------
+###### _TUTORIAL  (v1.0)_
+# Atualize seu dispositivo - Faça você mesmo 
+**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo FrescoGO na atualização do firmware do mesmo._**
+
 **_Considerações iniciais:_**
 **1.** *Se você não possui conhecimentos de instalação de aplicativos e drivers, bem como na configuração de hardware, sugiro que opte por realizar esta fase de _preparação do ambiente_ utilizando o [SUPORTE REMOTO](https://github.com/eltonrios/FrescoGO_Up/blob/master/tutoriais/atualizacao_remota.md)_*;*
 ---------------------------------------------------------------------

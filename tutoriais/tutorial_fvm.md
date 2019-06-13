@@ -1,6 +1,6 @@
 ###### _TUTORIAL  (v1.0)_
 # Atualize seu dispositivo - Faça você mesmo 
-**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo *FrescoGO* na atualização do firmware instalado no mesmo._**
+**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo FrescoGO na atualização do firmware do mesmo._**
 
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
@@ -53,7 +53,7 @@ Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0Vt
 
 
 <!-- Formato de texto: https://guides.github.com/features/mastering-markdown/#examples
--->
+
 1. # GITHUB Github 
 2. ## GITHUB Github
 3. **GITHUB Github**
@@ -145,7 +145,4 @@ Inline code
 I think you should use an
 `<addr>` element here instead.
 
-
-without learning Markdown syntax. In addition to Markdown formatting like bold and italic styles and creating headers, links, and lists, the toolbar includes GitHub-specific features such as @mentions, task lists, and links to issues and pull requests.
-
-
+-->

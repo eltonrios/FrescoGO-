@@ -29,9 +29,9 @@ Opção alternativa para esse driver pode ser encontrada [aqui](https://drive.go
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
 **1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo:
+
 [frescobol.ino](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino)
 [serial.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h)
-
 [pt.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h)
 
 [tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h)

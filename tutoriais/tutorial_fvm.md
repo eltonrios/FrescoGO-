@@ -4,8 +4,7 @@
 
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
-#### ---------------------------------------------------------------------
-
+---------------------------------------------------------------------
 **_Considerações iniciais:_**
 
 **1.** *Se você não possui conhecimentos de instalação de aplicativos e drivers, bem como na configuração de hardware, sugiro que opte por realizar esta fase de _preparação do ambiente_ utilizando o [SUPORTE REMOTO](https://github.com/eltonrios/FrescoGO_Up/blob/master/tutoriais/atualizacao_remota.md)_*;*

@@ -9,7 +9,8 @@
 
 **3.** Faça a instalação do mesmo;
 
-**4.** Após a instalação, baixe o driver para seu dispositivo em https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0VtVliTP9X;
+**4.** Após a instalação, baixe o driver para seu dispositivo em https://drive.google.com/open?id=1VTL2lCYFa-qNSE-W7CuF0xUKozHJST1d
+Alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0VtVliTP9X;
 
 **5.** Após baixar e clicar duas vezes logo se apresentará a tela abaixo:
 

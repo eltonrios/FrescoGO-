@@ -137,6 +137,15 @@ mojombo/github-flavored-markdown#1
 Strikethrough
 Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 
+Blockquotes
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
+Inline code
+I think you should use an
+`<addr>` element here instead.
+
 
 without learning Markdown syntax. In addition to Markdown formatting like bold and italic styles and creating headers, links, and lists, the toolbar includes GitHub-specific features such as @mentions, task lists, and links to issues and pull requests.
 

@@ -3,7 +3,7 @@
 
 
 
-**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo *FrescoGO* na atualização do firmware instalado no mesmo.**_
+**_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo *FrescoGO* na atualização do firmware instalado no mesmo._**
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
 ---------------------------------------------------------------------

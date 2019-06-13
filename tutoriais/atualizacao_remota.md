@@ -7,10 +7,9 @@
 
 **1.** *O TeamViewer é uma ferramenta amplamente utilizada, no mundo inteiro, para o serviço de suporte remoto;*
 
-**2.** *Não há como acessar sua máquina sem permissão;*
+**2.** *Não há como acessar sua máquina sem sua permissão;*
 
-**3.** *Você verá tudo o que acontece, pois tudo se passa na tela, nada é feito sem que você tenha visualização, 
-sendo assim bastaria fechar o programa.*
+**3.** *Você verá tudo o que acontece, pois todas as ações remotas são visíveis em sua tela, nada é feito sem que você tenha visualização, e pode fechar o programa no momento que desejar.*
 
 ##### Video-aula: https://www.youtube.com/watch?v=u7jbKk6CK4I
 

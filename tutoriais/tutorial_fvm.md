@@ -2,10 +2,7 @@
 
 # Atualize seu dispositivo - Faça você mesmo 
 
-6. **_GITHUB Github_** 
-
-
-O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo *FrescoGO* na atualização do firmware instalado no mesmo.
+**O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo *FrescoGO* na atualização do firmware instalado no mesmo.**
 ---------------------------------------------------------------------
 ## *Preparando o ambiente:*
 ---------------------------------------------------------------------

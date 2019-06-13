@@ -51,7 +51,7 @@ Obs: Os links para os arquivos da versão original podem ser encontrados no fina
 ---------------------------------------------------------------------
 **a.** Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
 
-**b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos.
+**b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos).
 
 
 ## *Arquivos da versão original:*

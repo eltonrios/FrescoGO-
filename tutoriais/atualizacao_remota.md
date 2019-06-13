@@ -35,5 +35,7 @@
 
 **Passo 5.** Pronto, agora seu PC está pronto para ser acessado remotamente, conecte o seu dispositivo *FrescoGO* em uma porta USB e acompanhe a atuação do suporte que irá interagir com você através do Bloco de Notas.
 
+http://github.com - automatic!
+[GitHub](http://github.com)
 
 

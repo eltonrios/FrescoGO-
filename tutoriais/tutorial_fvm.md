@@ -13,7 +13,7 @@
 
 **4.** Após a instalação, clique [aqui](https://drive.google.com/open?id=1VTL2lCYFa-qNSE-W7CuF0xUKozHJST1d) para baixar o driver para seu dispositivo;
 
-Opção alternativa pode ser encontrada [aqui](https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0VtVliTP9X);
+Opção alternativa para esse driver pode ser encontrada [aqui](https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0VtVliTP9X);
 
 **5.** Após baixar e clicar duas vezes irá abrir a janela abaixo:
 
@@ -29,18 +29,18 @@ Opção alternativa pode ser encontrada [aqui](https://drive.google.com/open?id=
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
 **1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo:
-<https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino>
-<https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h> 
-<https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h> 
-<https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h> 
-<https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h> 
+[frescobol.ino](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino)
+[serial.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h) 
+[pt.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h) 
+[tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h) 
+[pitches.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h) 
 
 Obs: Caso queira optar pela versão original, utilize os links abaixo:
-<https://github.com/frescogo/frescogo/blob/master/software/frescobol.ino>
-<https://github.com/frescogo/frescogo/blob/master/software/serial.c.h>
-<https://github.com/frescogo/frescogo/blob/master/software/pt.c.h>
-<https://github.com/frescogo/frescogo/blob/master/software/tv.c.h>
-<https://github.com/frescogo/frescogo/blob/master/software/pitches.h>
+[frescobol.ino](https://github.com/frescogo/frescogo/blob/master/software/frescobol.ino)
+[serial.c.h](https://github.com/frescogo/frescogo/blob/master/software/serial.c.h)
+[pt.c.h](https://github.com/frescogo/frescogo/blob/master/software/pt.c.h)
+[tv.c.h](https://github.com/frescogo/frescogo/blob/master/software/tv.c.h)
+[pitches.c.h](https://github.com/frescogo/frescogo/blob/master/software/pitches.h)
  
 **2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
 

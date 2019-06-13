@@ -11,6 +11,8 @@
 
 **4.** Após a instalação, baixe o driver para seu dispositivo em https://drive.google.com/open?id=1VTL2lCYFa-qNSE-W7CuF0xUKozHJST1d;
 
+Opção alternativa: https://drive.google.com/open?id=1goUx56K8cNx4pufPFdrshv0VtVliTP9X;
+
 **5.** Após baixar e clicar duas vezes logo se apresentará a tela abaixo:
 
 ![Instalador](http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png "Setup")

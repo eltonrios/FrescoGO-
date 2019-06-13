@@ -36,7 +36,7 @@ Opção alternativa para esse driver pode ser encontrada [aqui](https://drive.go
 * [tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h)
 * [pitches.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h) 
 
-Obs: Os links para os arquivos da versão original podem ser encontrados no final deste tutorial.
+Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos da versão original, cujos links podem ser encontrados no final deste tutorial.
  
 **2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
 

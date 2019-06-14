@@ -25,7 +25,7 @@
 **7.** Conecte seu FrescoGo à porta USB do computador e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
 
 <!-- Obs: http://blogdarobotica.com/instalando-driver-serial-para-arduinos-com-chip-ch340/
--->
+--> 
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------

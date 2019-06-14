@@ -18,7 +18,7 @@
 
 **5.** Após baixar e clicar duas vezes irá abrir a janela abaixo:
 
-![Instalador](http://i1.wp.com/blogdarobotica.com/wp-content/uploads/2016/05/executavel.png "Setup")
+![Instalador](driver341.png "Setup")
 
 **6.** Clique na opção Install;
 
@@ -66,7 +66,7 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 **6.** Quando aparecer a palavra "Carregado." seu dispositivo já estará atualizado, podendo ser desconectado;
 
-## *Dicas:*
+## *Dicas importantes:*
 ---------------------------------------------------------------------
 **a.** Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
 

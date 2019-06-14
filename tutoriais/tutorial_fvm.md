@@ -56,9 +56,11 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 **7.** Observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
 
-![Seleção da porta](images/barra_status.png "Seleção da porta")
+![Status](images/barra_status.png "Status")
 
 **4.** Faça o envio da nova programação para seu dispositivo *FrescoGO*, clicando no icone de uma seta para a direita, que se encontra abaixo da opção "Arquivo", no menu principal;
+
+![Carregar](images/transferir.png "Carregar")
 
 **5.** Vai aparecer a palavra "Carregando..." na barra azul logo abaixo dos códigos, aguarde o processo ser concluído (normalmente dura de 15 a 30 segundos); 
 

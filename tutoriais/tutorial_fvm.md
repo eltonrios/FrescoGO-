@@ -42,9 +42,13 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 **3.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador;
 
-**4.** Vá no menu _Ferramentas_ e selecione a placa, conforme figura abaixo;
+**4.** Vá no menu _Ferramentas_ e selecione a placa;
 
 ![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
+
+**5.** Em seguida selecione o processador;
+
+![Seleção do arduino](images/placa_select.png "Seleção do arduino")
 
 e observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
 

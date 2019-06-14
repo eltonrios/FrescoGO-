@@ -36,7 +36,7 @@
 * [tv.c.h](https://drive.google.com/open?id=1SaVrmaMnEzfm3b3zIiPjqmuVypuqsxIu)
 * [pitches.c.h](https://drive.google.com/open?id=1ESJhCEBU662xrFHY27G7DBs4r17MKv8O) 
 
-_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._
+_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._ 
  
 **2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
 

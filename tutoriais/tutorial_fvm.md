@@ -92,7 +92,7 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 5. _GITHUB Github_
 6. **_GITHUB Github_** 
 7. *GITHUB Github* 
-8. *_GITHUB Github_*
+8. *_GITHUB Github_* 
 
 # This is an <h1> tag
 ## This is an <h2> tag

@@ -36,7 +36,7 @@ Opção alternativa para esse driver pode ser encontrada [aqui](https://drive.go
 * [tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h)
 * [pitches.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h) 
 
-_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._
+_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._
  
 **2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
 
@@ -53,6 +53,8 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 **a.** Pode acontecer de, após uma atualização, virem valores estranhos nos parâmetros de configuração, observe e parametrize se necessário;
 
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos).
+
+**c.** Clique aqui para conhecer a versão 
 
 
 ## *Arquivos da versão original:*

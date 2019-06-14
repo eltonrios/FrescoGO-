@@ -40,7 +40,12 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
  
 **2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
 
-**3.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador e observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
+**3.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador;
+
+**4.** Vá no menu _Ferramentas_ e selecione a placa, conforme figura abaixo;
+![Foto do marcador](images/device.jpg "Foto do Aparelho")
+
+e observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
 
 **4.** Faça o envio da nova programação para seu dispositivo *FrescoGO*, clicando no icone de uma seta para a direita, que se encontra abaixo da opção "Arquivo", no menu principal;
 

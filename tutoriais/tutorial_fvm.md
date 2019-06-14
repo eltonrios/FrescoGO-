@@ -44,7 +44,7 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 **4.** Vá no menu _Ferramentas_ e selecione a placa, conforme figura abaixo;
 
-![Seleção da placa](https://drive.google.com/open?id=1Snx0dYbIgZj0UUvyxRyiBUiTPCzZqnLZ "Seleção da placa")
+![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
 
 e observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
 

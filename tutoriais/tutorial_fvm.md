@@ -30,11 +30,11 @@ Opção alternativa para esse driver pode ser encontrada [aqui](https://drive.go
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
 **1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo:
-* [frescobol.ino](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/frescobol.ino)
-* [serial.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/serial.c.h)
-* [pt.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pt.c.h)
-* [tv.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/tv.c.h)
-* [pitches.c.h](https://github.com/eltonrios/FrescoGO_Up/blob/master/software/pitches.h) 
+* [frescobol.ino](https://drive.google.com/open?id=1wJchZQ1AlDnXA9qXEgPH90Tx8KN4v30X)
+* [serial.c.h](https://drive.google.com/open?id=1sWouCe0FiZ5FsskrS9-P2_QPE3HSfx6U)
+* [pt.c.h](https://drive.google.com/open?id=1TSip-cBZblswym49Wb5n1nMdpQIh9epG)
+* [tv.c.h](https://drive.google.com/open?id=1SaVrmaMnEzfm3b3zIiPjqmuVypuqsxIu)
+* [pitches.c.h](https://drive.google.com/open?id=1ESJhCEBU662xrFHY27G7DBs4r17MKv8O) 
 
 _Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._
  

@@ -59,11 +59,11 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 ## *Arquivos da versão original:*
 ---------------------------------------------------------------------
-* [frescobol.ino](https://github.com/frescogo/frescogo/blob/master/software/frescobol.ino)
-* [serial.c.h](https://github.com/frescogo/frescogo/blob/master/software/serial.c.h)
-* [pt.c.h](https://github.com/frescogo/frescogo/blob/master/software/pt.c.h)
-* [tv.c.h](https://github.com/frescogo/frescogo/blob/master/software/tv.c.h)
-* [pitches.c.h](https://github.com/frescogo/frescogo/blob/master/software/pitches.h)
+* [frescobol.ino](https://drive.google.com/open?id=1Hwa9VkJ0rkZEtLExXNoZukCgUNkIyMOO)
+* [serial.c.h](https://drive.google.com/open?id=1qxyEr3RoMAnEdNS1DQJPmHE5zYEciYxQ)
+* [pt.c.h](https://drive.google.com/open?id=1Sfg3oCKM-GI0d-Pqjpqxx8alA5Ui1UTP)
+* [tv.c.h](https://drive.google.com/open?id=1IOD05V6JS8LNATIkKeeQu03WjPRobs9h)
+* [pitches.c.h](https://drive.google.com/open?id=1INsqrSP8M0tqQcELWQ9Lyw1x0xohcZas)
 
 <!-- Formato de texto: https://guides.github.com/features/mastering-markdown/#examples
 

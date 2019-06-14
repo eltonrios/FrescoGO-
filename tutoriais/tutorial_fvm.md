@@ -18,7 +18,7 @@
 
 **5.** Após baixar e clicar duas vezes irá abrir a janela abaixo:
 
-![Instalador](driver341.png "Setup")
+![Instalador](images/driver341.png "Setup")
 
 **6.** Clique na opção Install;
 

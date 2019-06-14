@@ -50,12 +50,13 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 ![Seleção da placa](images/placa_select.png "Seleção da placa")
 
-**6.** Selecione a porta de comunicação;
+**6.** Selecione a porta de comunicação (é provável que ele seja COM3 ou maior, já que COM1 e COM2 são normalmente reservados para portas seriais nativas, e não por USB);
 
 ![Seleção da porta](images/com_select.png "Seleção da porta")
 
+**7.** Observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
 
-e observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
+![Seleção da porta](images/barra_status.png "Seleção da porta")
 
 **4.** Faça o envio da nova programação para seu dispositivo *FrescoGO*, clicando no icone de uma seta para a direita, que se encontra abaixo da opção "Arquivo", no menu principal;
 

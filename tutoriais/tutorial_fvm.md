@@ -46,9 +46,14 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 ![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
 
-**5.** Em seguida selecione o processador;
+**5.** Selecione o processador;
 
 ![Seleção da placa](images/placa_select.png "Seleção da placa")
+
+**6.** Selecione a porta de comunicação;
+
+![Seleção da porta](images/placa_select.pngcom_select.png "Seleção da porta")
+
 
 e observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
 

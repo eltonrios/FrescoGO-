@@ -22,8 +22,6 @@
 
 **6.** Clique na opção Install;
 
-//**7.** Conecte seu FrescoGo à porta USB do computador; e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
-
 <!-- Obs: http://blogdarobotica.com/instalando-driver-serial-para-arduinos-com-chip-ch340/
 --> 
 
@@ -38,7 +36,7 @@
 
 _Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._ 
  
-**2.** Entre nesta pasta e dê dois cliques no arquivo "**frescobol.ino**" e isso fará com que seja aberto o **IDE Arduino** e todo o pacote será carregado automaticamente;
+**2.** Entre na pasta criada acima e dê dois cliques no arquivo "**frescobol.ino**", isso fará com que seja aberto o **IDE Arduino** e todo o pacote carregado automaticamente;
 
 **3.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador;
 

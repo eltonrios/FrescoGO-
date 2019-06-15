@@ -22,7 +22,7 @@
 
 **6.** Clique na opção Install;
 
-**7.** Conecte seu FrescoGo à porta USB do computador e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
+//**7.** Conecte seu FrescoGo à porta USB do computador; e verifique se irá reconhecer o dispositivo, se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.
 
 <!-- Obs: http://blogdarobotica.com/instalando-driver-serial-para-arduinos-com-chip-ch340/
 --> 
@@ -50,11 +50,11 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 ![Seleção da placa](images/placa_select.png "Seleção da placa")
 
-**6.** Selecione a porta de comunicação (é provável que ele seja COM3 ou maior, já que COM1 e COM2 são normalmente reservados para portas seriais nativas, e não por USB);
+**6.** Selecione a porta de comunicação (é provável que seja COM3 ou maior, já que COM1 e COM2 são normalmente reservados para portas seriais nativas, e não por USB);
 
 ![Seleção da porta](images/com_select.png "Seleção da porta")
 
-**7.** Observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar);
+**7.** Observe se irá conectar e reconhecer o dispositivo (no rodapé da janela do aplicativo, lado direito, deverá aparecer algo como "Arduino Nano, ATmega328P (Old Bootloader) em COM12" (a porta COM, principalmente, pode variar). Se isso acontecer já estará tudo pronto para proceder a atualização, sempre que necessário.;
 
 ![Status](images/barra_status.png "Status")
 

@@ -30,7 +30,7 @@
 **1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo.
 Clique em DOWNLOAD caso apareça a imagem abaixo;
 
-![Baixar](images/baixar.jpeg "Baixar")
+![Baixar](images/baixar.png "Baixar")
 
 Ou clique no símbolo de download, no canto à direita, ao alto;
 

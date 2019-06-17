@@ -29,8 +29,11 @@
 ---------------------------------------------------------------------
 **1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo.
 Clique em DOWNLOAD caso apareça a imagem abaixo;
+
 ![Baixar](images/baixar.jpeg "Baixar")
+
 Ou clique no símbolo de download, no canto à direita, ao alto;
+
 ![Baixar](images/arquivos.png "Baixar")
 
 * [frescobol.ino](https://drive.google.com/open?id=1wJchZQ1AlDnXA9qXEgPH90Tx8KN4v30X)

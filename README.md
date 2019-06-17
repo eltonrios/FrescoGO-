@@ -106,7 +106,9 @@ Quesitos de pontuação:
           (`4400x85%`).
     - Os dois últimos golpes antes da queda também são desconsiderados.
     - O número limite de quedas é calculado automaticamente pelo aplicativo, dividindo-se o tempo de duração estabelecido para a       apresentação por 10 (relação de 1 bola para cada 10 segundos de jogo).
+      
       Exemplo:
+      
         - Para um jogo de 180 segundos (3 minutos): 180 / 10 = 18 quedas
     - A apresentação é encerrada sumariamente ao atingir este limite de quedas.
 

@@ -27,7 +27,12 @@
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
-**1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo:
+**1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo.
+Clique em DOWNLOAD caso apareça a imagem abaixo;
+![Baixar](images/baixar.jpeg "Baixar")
+Ou clique no símbolo de download, no canto à direita, ao alto;
+![Baixar](images/arquivos.png "Baixar")
+
 * [frescobol.ino](https://drive.google.com/open?id=1wJchZQ1AlDnXA9qXEgPH90Tx8KN4v30X)
 * [serial.c.h](https://drive.google.com/open?id=1sWouCe0FiZ5FsskrS9-P2_QPE3HSfx6U)
 * [pt.c.h](https://drive.google.com/open?id=1TSip-cBZblswym49Wb5n1nMdpQIh9epG)

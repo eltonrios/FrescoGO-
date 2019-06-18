@@ -36,11 +36,11 @@ Ou clique no símbolo de download, no canto à direita, ao alto;
 
 ![Baixar](images/arquivos.png "Baixar")
 
-* [frescobol.ino](https://drive.google.com/open?id=1wJchZQ1AlDnXA9qXEgPH90Tx8KN4v30X)
-* [serial.c.h](https://drive.google.com/open?id=1sWouCe0FiZ5FsskrS9-P2_QPE3HSfx6U)
-* [pt.c.h](https://drive.google.com/open?id=1TSip-cBZblswym49Wb5n1nMdpQIh9epG)
-* [tv.c.h](https://drive.google.com/open?id=1SaVrmaMnEzfm3b3zIiPjqmuVypuqsxIu)
-* [pitches.c.h](https://drive.google.com/open?id=1ESJhCEBU662xrFHY27G7DBs4r17MKv8O) 
+* [frescobol.ino](https://drive.google.com/open?id=1-Jhw2p7bNkBBUXoWHHQIsBpEQUTdWVId)
+* [serial.c.h](https://drive.google.com/open?id=1cQCPTfMKda2oTprmsz8QSN59A1eOQ-S0)
+* [pt.c.h](https://drive.google.com/open?id=1-I4Ipilf9fa5i-IJ5TNysod09AqGI2Ap)
+* [tv.c.h](https://drive.google.com/open?id=1-9dPSNjR8qjJrg89yOwuOQyppwkKcDAK)
+* [pitches.c.h](https://drive.google.com/open?id=1-0_HBmZCHC8zVWlNkYYWHzDSmayMDOke) 
 
 _Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._ 
  

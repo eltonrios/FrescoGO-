@@ -18,6 +18,10 @@ void Serial_Score (void) {
     u32 equ1 = min(((G.ps[0]/100)),((G.ps[1]/100)))*11/10;
     u32 equ2 = min(bruta, equ1);
     u32 equ3 = bruta - equ2;
+    float tempo_restante = (S.timeout/1000)-(G.time/1000);
+    float fracao_segundo_restante = ((tempo_restante/60)-(int(tempo_restante/60)));
+    float tempo_jogo = G.time/1000;
+    float fracao_segundo_jogo = ((tempo_jogo/60)-(int(tempo_jogo/60)));    
     
     Serial.println();
     Serial.println(F("-------------------------------------------------"));
@@ -29,17 +33,53 @@ void Serial_Score (void) {
     Serial.println();
     Serial.println(F("-------------------------------------------------"));
     
-    //OK – TEMPO DE JOGO
     sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
     Serial.print(STR);
-    Serial.print(G.time/1000);
-    Serial.println(F(" s"));
-    
+    if (G.time > S.timeout) {
+         Serial.print(S.timeout/1000/60);
+         Serial.println(F(" min"));
+    }
+    else if ((G.time/1000) > 59) {
+        Serial.print(int(G.time/1000/60));
+        Serial.print(F(" min e "));
+        if ((fracao_segundo_jogo*60)-(int(fracao_segundo_jogo*60)) >= 0,5) {
+            Serial.print(int(fracao_segundo_jogo*60)+1);
+            Serial.println(F(" seg"));
+        } else {
+            Serial.print(int(fracao_segundo_jogo*60));
+            Serial.println(F(" seg"));
+        }
+    } 
+    else if (G.time == 0) {
+        Serial.print(S.timeout/1000/60);
+        Serial.println(F(" min"));
+        //acrescentar minutos e segundos por segurança
+    }
+    else {
+        Serial.print((G.time/1000));
+        Serial.println(F(" seg"));
+    }
+     
     //OK – TEMPO RESTANTE
     sprintf_P(STR, PSTR("%10S: "), F("Tempo Restante......."));
     Serial.print(STR);
-    Serial.print(G.time > S.timeout ? 0 : (S.timeout-G.time)/1000);
-    Serial.println(F(" s"));
+    if (G.time > S.timeout) {
+        Serial.println(F("0 min e 0 seg"));
+    }
+    else if (((S.timeout-G.time)/1000) > 59) {
+        Serial.print(int((S.timeout/1000)-(G.time/1000))/60);        
+        Serial.print(F(" min e "));
+        if ((fracao_segundo_restante*60)-(int(fracao_segundo_restante*60)) >= 0,5) {
+            Serial.print(int(fracao_segundo_restante*60)+1);
+            Serial.println(F(" seg"));
+        } else {
+            Serial.print(int(fracao_segundo_restante*60));
+            Serial.println(F(" seg"));
+        }
+    } else {
+        Serial.print((S.timeout/1000)-(G.time/1000));
+        Serial.println(F(" seg"));
+    }
     
     //OK – QUANTIDADE BOLAS
     sprintf_P(STR, PSTR("%10S: "), F("Quantidade Bolas....."));
@@ -51,6 +91,16 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.println(G.hits);
 
+    //OK - VELOCIDADE MÉDIA
+    sprintf_P(STR, PSTR("Velocidade Média.....: "));
+    Serial.print(STR);
+    if (G.time > 5000) {
+        Serial.print((int)G.pace[0]);
+        Serial.println(F(" km/h"));
+    } else {
+        Serial.println("---");
+    }
+    
     //OK – JUIZ
     sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
     Serial.print(STR);
@@ -65,27 +115,17 @@ void Serial_Score (void) {
     Serial.println(F(" pts"));
 
     //OK – EQUILÍBRIO (PTS PERDIDOS)
-    sprintf_P(STR, PSTR("Equilibrio...........: "));
+    sprintf_P(STR, PSTR("Desconto Equilibrio..: "));
     Serial.print(STR);
     Serial.print(equ3);
     Serial.println(F(" pts (-)"));
              
     //OK – QUEDAS (PTS PERDIDOS)
-    sprintf_P(STR, PSTR("Quedas...............: "));
+    sprintf_P(STR, PSTR("Desconto Quedas......: "));    
     Serial.print(STR);
     Serial.print((((bruta - equ3)*(3*Falls())/100)));
     Serial.println(F(" pts (-)"));
         
-    //OK - VELOCIDADE MÉDIA
-    sprintf_P(STR, PSTR("Velocidade Média.....: "));
-    Serial.print(STR);
-    if (G.time > 5000) {
-        Serial.print((int)G.pace[0]);
-        Serial.println(F(" Km/h"));
-    } else {
-        Serial.println("---");
-    }
-    
     //OK – PONTUAÇÃO FINAL
     sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO FINAL......"));
     Serial.print(STR);
@@ -173,8 +213,7 @@ void Serial_Score (void) {
     //destrezas
     //fim
 
-    //sprintf_P(STR, PSTR("(v%d.%d / %dcm / %ds / pot=%d / equ=%d / cont=%d / max=%d)"),
-     sprintf_P(STR, PSTR("(v%d.%d.%d/%dcm/%ds/pot%d/equ%d/cont%d/fim%d/max%d/sens%d)"),
+    sprintf_P(STR, PSTR("(v%d%d%d/%dcm/%ds/pot%d/equ%d/cont%d/fim%d/max%d/sens%d)"),
                 MAJOR, MINOR, REVISION,
                 S.distancia,
                 (int)(S.timeout/1000),

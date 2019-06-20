@@ -69,10 +69,14 @@ void Serial_Score (void) {
     else if (((S.timeout-G.time)/1000) > 59) {
         Serial.print(int((S.timeout/1000)-(G.time/1000))/60);        
         Serial.print(F(" min e "));
-        if ((fracao_segundo_restante*60)-(int(fracao_segundo_restante*60)) >= 0,5) {
+        if ((int(((S.timeout/1000)-(G.time/1000))/60)*60) == S.timeout/1000) {
+            Serial.println(F(" 0 seg"));
+        }        
+        else if ((fracao_segundo_restante*60)-(int(fracao_segundo_restante*60)) >= 0,5) {
             Serial.print(int(fracao_segundo_restante*60)+1);
             Serial.println(F(" seg"));
-        } else {
+        } 
+        else {
             Serial.print(int(fracao_segundo_restante*60));
             Serial.println(F(" seg"));
         }
@@ -80,6 +84,7 @@ void Serial_Score (void) {
         Serial.print((S.timeout/1000)-(G.time/1000));
         Serial.println(F(" seg"));
     }
+    
     
     //OK – QUANTIDADE BOLAS
     sprintf_P(STR, PSTR("%10S: "), F("Quantidade Bolas....."));

@@ -33,6 +33,7 @@ void Serial_Score (void) {
     Serial.println();
     Serial.println(F("-------------------------------------------------"));
     
+ //OK – TEMPO TOTAL
     sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
     Serial.print(STR);
     if (G.time > S.timeout) {

@@ -38,18 +38,21 @@ void Serial_Score (void) {
  //OK – TEMPO TOTAL
     sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
     Serial.print(STR);
-    if (G.time > S.timeout) {
-         Serial.print(S.timeout/1000/60);
+    if (G.time > S.timeout) {               //se tempo de jogo for maior que duração prevista
+         Serial.print(S.timeout/1000/60);   //então tempo de jogo será igual à duração prevista
          Serial.println(F(" min"));
     }
-    else if ((G.time/1000) > 59) {
-        Serial.print(int(G.time/1000/60));
+    else if ((G.time/1000) > 59) {          //caso contrário, se tempo restante for maior que 59 segundos
+        Serial.print(int(G.time/1000/60));  //coloque a parte inteira dos minutos e o restante em segundos
         Serial.print(F(" min e "));
-        if ((fracao_segundo_jogo*60)-(int(fracao_segundo_jogo*60)) >= 0,5) {
-            Serial.print(int(fracao_segundo_jogo*60)+1);
+        //formatando os segundos
+        if ((fracao_segundo_jogo*60)-(int(fracao_segundo_jogo*60)) >= 0,5) {  //se a parte em segundos for "quebrada"
+            Serial.print(int(fracao_segundo_jogo*60)+1);                      //faz arredondamento dos segundos
             Serial.println(F(" seg"));
-        } else {
-            Serial.print(int(fracao_segundo_jogo*60));
+													            If (int(fracao_segundo_jogo*60)+1 > 59,5); {  //se a parte inteira for igual a 60
+	                Serial.print(F(" 0 seg"));                  considere parte em segundos igual
+            } else {
+            Serial.print(int(fracao_segundo_jogo*60));  //
             Serial.println(F(" seg"));
         }
     } 
@@ -62,6 +65,7 @@ void Serial_Score (void) {
         Serial.print((G.time/1000));
         Serial.println(F(" seg"));
     }
+
      
     //OK – TEMPO RESTANTE
     sprintf_P(STR, PSTR("%10S: "), F("Tempo Restante......."));

@@ -112,6 +112,7 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.println(S.juiz);
 
+    /*
     //OK - PONTUAÇÃO BRUTA 
     Serial.println(F("-------------------------------------------------"));
     //sprintf_P(STR, PSTR("Pontuação Bruta......:%5ld"), ((G.ps[0]/100)+(G.ps[1]/100))/2);
@@ -119,6 +120,7 @@ void Serial_Score (void) {
     Serial.print(STR);
     Serial.print(((G.ps[0]/100)+(G.ps[1]/100))/2);    
     Serial.println(F(" pts"));
+    */
 
     //OK – EQUILÍBRIO (PTS PERDIDOS)
     sprintf_P(STR, PSTR("Desconto Equilibrio..: "));
@@ -126,11 +128,13 @@ void Serial_Score (void) {
     Serial.print(equ3);
     Serial.println(F(" pts (-)"));
              
+    /*
     //OK – QUEDAS (PTS PERDIDOS)
     sprintf_P(STR, PSTR("Desconto Quedas......: "));    
     Serial.print(STR);
     Serial.print((((bruta - equ3)*(3*Falls())/100)));
     Serial.println(F(" pts (-)"));
+    */
         
     //OK – PONTUAÇÃO FINAL
     sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO FINAL......"));
@@ -344,25 +348,30 @@ void Serial_Log (void) {
 */
     Serial.println(F("-----------------------------------------------"));
     u32 pct = min(990, Falls()*CONT_PCT);
+    
     //Pontuação Bruta
     sprintf_P(STR, PSTR("%8S "), F("Pontuação Bruta..: "));
     Serial.print(STR);
     Serial.print(avg/100);
     Serial.println(F(" pts"));
+    
     //Equilibrio
     sprintf_P(STR, PSTR("%8S "), F("Equilibrio.......: "));
     Serial.print(STR);
     Serial.print(S.equilibrio ? (avg/100)-(total/100) : 0);    
     Serial.println(F(" pts (-)"));
+    
     //Quedas
     sprintf_P(STR, PSTR("%8S "), F("Quedas...........: "));
     Serial.print(STR);
     Serial.print(total*pct/100000);    
     Serial.println(F(" pts (-)"));
+    
     //Golpes
     sprintf_P(STR, PSTR("%8S "), F("Golpes...........: "));
     Serial.print(STR);
     Serial.println(G.hits);
+    
     //Pontuação Líquida
     sprintf_P(STR, PSTR("%8S "), F("Pontuação Final..: "));
     Serial.print(STR);

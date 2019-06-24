@@ -133,7 +133,7 @@ void Serial_Score (void) {
     
     //OK – PONTUAÇÃO FINAL
     Serial.println(F("-------------------------------------"));    
-    sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO >>>>>>>>>>>"));
+    sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO............"));
     Serial.print(STR);
     Serial.print(G.total);
     Serial.println(F(" pts"));

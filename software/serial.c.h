@@ -301,6 +301,7 @@ void Serial_Log (void) {
         Serial.println();
         delay(50);
     }
+    
     //Serial.println();
     u32 bests[2][2] = { {0,0}, {0,0} };
     if (S.potencia) {
@@ -377,10 +378,11 @@ void Serial_Log (void) {
     Serial.println(F(" pts"));       
     Serial.println(F("-------------------------------------"));
     
-    //OK – JUIZ
+    //JUIZ
     sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
     Serial.print(STR);
     Serial.println(S.juiz);
+    Serial.println(F("-------------------------------------"));
     
     Serial.print(F("= FrescoGO! (versao "));
     Serial.print(MAJOR);

@@ -131,8 +131,8 @@ void Serial_Score (void) {
     Serial.println(F(" pts (-)"));
     */
     
-    Serial.println(F("-------------------------------------"));    
     //OK – PONTUAÇÃO FINAL
+    Serial.println(F("-------------------------------------"));    
     sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO >>>>>>>>>>>"));
     Serial.print(STR);
     Serial.print(G.total);
@@ -216,13 +216,8 @@ void Serial_Score (void) {
     }
     //fim condição para marcar destrezas
     Serial.println(F("-------------------------------------"));
-  
-    //OK – JUIZ
-    sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
-    Serial.print(STR);
-    Serial.println(S.juiz);
     
-    Serial.println(F("-------------------------------------"));
+    //Serial.println(F("-------------------------------------"));
     //destrezas
     //fim
 
@@ -381,6 +376,12 @@ void Serial_Log (void) {
     Serial.print(total*(1000-pct)/100000); 
     Serial.println(F(" pts"));       
     Serial.println(F("-------------------------------------"));
+    
+    //OK – JUIZ
+    sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
+    Serial.print(STR);
+    Serial.println(S.juiz);
+    
     Serial.print(F("= FrescoGO! (versao "));
     Serial.print(MAJOR);
     Serial.print(".");

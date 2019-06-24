@@ -25,7 +25,7 @@ void Serial_Score (void) {
     
     Serial.println();
     Serial.println(F("-------------------------------------"));
-    sprintf_P(STR, PSTR("        %10s"), S.names[0]);
+    sprintf_P(STR, PSTR("        %9s"), S.names[0]);
     Serial.print(STR);
     Serial.print(F(" / "));
     sprintf_P(STR, PSTR("%s"), S.names[1]);

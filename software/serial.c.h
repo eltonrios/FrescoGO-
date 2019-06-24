@@ -226,7 +226,7 @@ void Serial_Score (void) {
     //destrezas
     //fim
 
-    sprintf_P(STR, PSTR("(v%d%d%d/%dcm/%ds/pot%d/equ%d/cont%d/fim%d/max%d/sens%d)"),
+    sprintf_P(STR, PSTR("(V%d%d%d/%dcm/%ds/pot%d/equ%d/cont%d/bolas%d/max%d/sens%d)"),
                 MAJOR, MINOR, REVISION,
                 S.distancia,
                 (int)(S.timeout/1000),

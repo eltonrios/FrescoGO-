@@ -83,9 +83,9 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 ## *Arquivos da versão original:*
 ---------------------------------------------------------------------
-* [frescobol.ino](https://drive.google.com/open?id=1Hwa9VkJ0rkZEtLExXNoZukCgUNkIyMOO)
-* [serial.c.h](https://drive.google.com/open?id=1qxyEr3RoMAnEdNS1DQJPmHE5zYEciYxQ)
-* [pt.c.h](https://drive.google.com/open?id=1Sfg3oCKM-GI0d-Pqjpqxx8alA5Ui1UTP)
+* [frescobol.ino](https://drive.google.com/open?id=1IfIijcZMfmG5VjZHAePnsniMEEECiUC2)
+* [serial.c.h](https://drive.google.com/open?id=1vRsz_n9iXdh7xdED7TM6-yiZDOYG_6ln)
+* [pt.c.h](https://drive.google.com/open?id=1YhX42NDzzATDHIvR7276KoYw6jTPIdkr)
 * [tv.c.h](https://drive.google.com/open?id=1IOD05V6JS8LNATIkKeeQu03WjPRobs9h)
 * [pitches.c.h](https://drive.google.com/open?id=1INsqrSP8M0tqQcELWQ9Lyw1x0xohcZas)
 

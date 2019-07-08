@@ -158,9 +158,8 @@ void Serial_Score (void) {
                 sprintf_P(STR, PSTR("%3d "), (int)G.bests[0][0][k]);
                 Serial.print(STR);
             }
-            Serial.print(F("] => "));
-            Serial.print(sum0/HITS_BESTS);
-        Serial.println();
+            Serial.println(F("]"));
+            Serial.println();  
         
             int sum1 = 0;
             Serial.print(F("Golpes DIR [ "));
@@ -169,12 +168,23 @@ void Serial_Score (void) {
                 sprintf_P(STR, PSTR("%3d "), (int)G.bests[0][1][k]);
                 Serial.print(STR);
             }
-            Serial.print(F("] => "));
-            Serial.println(sum1/HITS_BESTS);
+            Serial.println(F("]"));
+            Serial.println();  
         //fim valores segunda linha
      //fim jogador 0
      
         } else {
+          //Mostra os golpes mais potentes de direita (quando não estao sendo marcados os backs
+            int sum1 = 0;
+            Serial.print(F("Maximas [ "));
+            for (int k=0; k<HITS_BESTS; k++) {
+                sum1 += G.bests[0][1][k];
+                sprintf_P(STR, PSTR("%3d "), (int)G.bests[0][1][k]);
+                Serial.print(STR);
+            }
+            Serial.print(F("]"));
+            Serial.println();            
+          //Fim dos golpes mais fortes de direita            
     }
     //fim condição para marcar destrezas
      
@@ -197,9 +207,8 @@ void Serial_Score (void) {
                 sprintf_P(STR, PSTR("%3d "), (int)G.bests[1][0][k]);
                 Serial.print(STR);
             }
-            Serial.print(F("] => "));
-            Serial.print(sum2/HITS_BESTS);
-        Serial.println();
+            Serial.println(F("]"));
+            Serial.println();  
         
             int sum3 = 0;
             Serial.print(F("Golpes DIR [ "));
@@ -208,19 +217,32 @@ void Serial_Score (void) {
                 sprintf_P(STR, PSTR("%3d "), (int)G.bests[1][1][k]);
                 Serial.print(STR);
             }
-            Serial.print(F("] => "));
-            Serial.println(sum3/HITS_BESTS);
+            Serial.println(F("]"));
+            Serial.println();  
         //fim valores segunda linha
     //fim jogador 1  
         } else {
+        //Mostra os golpes mais potentes de direita (quando não estao sendo marcados os backs
+            int sum3 = 0;
+            Serial.print(F("Maximas [ "));
+            for (int k=0; k<HITS_BESTS; k++) {
+                sum3 += G.bests[1][1][k];
+                sprintf_P(STR, PSTR("%3d "), (int)G.bests[1][1][k]);
+                Serial.print(STR);
+            }
+            Serial.print(F("]"));
+            Serial.println();
+       //Fim dos golpes mais fortes de direita             
     }
     //fim condição para marcar destrezas
     Serial.println(F("-------------------------------------"));
+     
+    //OK – JUIZ
+    sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
+    Serial.print(STR);
+    Serial.println(S.juiz);
+    Serial.println(F("-------------------------------------")); 
     
-    //Serial.println(F("-------------------------------------"));
-    //destrezas
-    //fim
-
     sprintf_P(STR, PSTR("(V%d%d%d/%dcm/%ds/pot%d/equ%d/cont%d/bolas%d/max%d/sens%d)"),
                 MAJOR, MINOR, REVISION,
                 S.distancia,
@@ -349,30 +371,30 @@ void Serial_Log (void) {
     u32 pct = min(990, Falls()*CONT_PCT);
     
     //Pontuação Bruta
-    sprintf_P(STR, PSTR("%8S "), F("Pontuação Bruta..: "));
+    sprintf_P(STR, PSTR("%10S: "), F("Pontuação Bruta......"));
     Serial.print(STR);
     Serial.print(avg/100);
     Serial.println(F(" pts"));
     
     //Equilibrio
-    sprintf_P(STR, PSTR("%8S "), F("Equilibrio.......: "));
+    sprintf_P(STR, PSTR("%10S: "), F("Equilibrio..........."));
     Serial.print(STR);
     Serial.print(S.equilibrio ? (avg/100)-(total/100) : 0);    
     Serial.println(F(" pts (-)"));
     
     //Quedas
-    sprintf_P(STR, PSTR("%8S "), F("Quedas...........: "));
+    sprintf_P(STR, PSTR("%10S: "), F("Quedas..............."));
     Serial.print(STR);
     Serial.print(total*pct/100000);    
     Serial.println(F(" pts (-)"));
     
     //Golpes
-    sprintf_P(STR, PSTR("%8S "), F("Golpes...........: "));
+    sprintf_P(STR, PSTR("%10S: "), F("Golpes..............."));
     Serial.print(STR);
     Serial.println(G.hits);
     
     //Pontuação Líquida
-    sprintf_P(STR, PSTR("%8S "), F("Pontuação Final..: "));
+    sprintf_P(STR, PSTR("%10S: "), F("Pontuação Final......"));
     Serial.print(STR);
     Serial.print(total*(1000-pct)/100000); 
     Serial.println(F(" pts"));       

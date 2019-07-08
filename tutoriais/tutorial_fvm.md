@@ -36,9 +36,9 @@ Ou clique no símbolo de download, no canto à direita, ao alto;
 
 ![Baixar](images/arquivos.png "Baixar")
 
-* [frescobol.ino](https://drive.google.com/open?id=1-Jhw2p7bNkBBUXoWHHQIsBpEQUTdWVId)
-* [serial.c.h](https://drive.google.com/open?id=10wcPkEHKkxv_XxsveLFQzvgZj0UfAsV-)
-* [pt.c.h](https://drive.google.com/open?id=1-I4Ipilf9fa5i-IJ5TNysod09AqGI2Ap)
+* [frescobol.ino](https://drive.google.com/open?id=1nFQezbxYflJxR_rKfi_8pLKdJPdeRXDT)
+* [serial.c.h](https://drive.google.com/open?id=1EdlmU6gT5JxPOP3KhOqpyzBlN9ryEByg)
+* [pt.c.h](https://drive.google.com/open?id=1i8_rwovOJCyElaUpPtW1NmxSnorevre6)
 * [tv.c.h](https://drive.google.com/open?id=1-9dPSNjR8qjJrg89yOwuOQyppwkKcDAK)
 * [pitches.c.h](https://drive.google.com/open?id=1-0_HBmZCHC8zVWlNkYYWHzDSmayMDOke) 
 

@@ -15,5 +15,10 @@ Selecione a versão compatível com o sistema operacional do PC e baixe a mesma;
 
 ![Seleção do arduino](images/download_Processing.PNG "download")
 ![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
-![download]((images/arduino_select.png "Seleção do arduino")
+![download](images/arduino_select.png "Seleção do arduino")
 
+Depois extraia os arquivos... isso pode levar um tempinho... e pronto, agora vamos carregar o placar;
+
+Volte na pasta FrescoGO_Up-master que foi criada durante a atualização do firmware, dê 2 cliques sobre ela e entre na pasta [placar].
+
+Clique  agora em **placar.pde**

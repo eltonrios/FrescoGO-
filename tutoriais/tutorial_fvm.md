@@ -1,4 +1,4 @@
-###### _TUTORIAL  (v1.0)_
+###### _TUTORIAL  (v1.1)_
 # Atualize seu dispositivo - Faça você mesmo 
 **_O objetivo desse breve tutorial é auxiliar aos usuários do dispositivo FrescoGO na atualização do firmware do mesmo._**
 
@@ -27,16 +27,18 @@
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
-**1.** Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
+**1.** Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/archive/master.zip) para baixar a versão mais recente;
 
 
 _Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. O link para baixar a versão original pode ser encontrado no final deste tutorial._ 
  
-**2.** Entre na pasta criada ("aparelho-master"), depois na pasta "software", em seguida dê dois cliques no arquivo "**software.ino**", isso fará com que seja aberto o **IDE Arduino** e todo o pacote carregado automaticamente;
+**2.** Extraia todos os arquivos e pastas do pacote baixado ("FrescoGO_Up-master.zip"), depois entre na pasta "FrescoGO_Up-master";
 
-**3.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador;
+**3.** Entre na pasta "software" e em seguida dê dois cliques no arquivo "**software.ino**", isso fará com que seja aberta a aplicação **IDE Arduino** e todo o pacote carregado automaticamente;
 
-**4.** Vá no menu _Ferramentas_ e selecione a placa;
+**4.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador;
+
+**5.** Vá no menu _Ferramentas_ e selecione a placa;
 
 ![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
 
@@ -66,108 +68,9 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos).
 
-**c.** Clique aqui para conhecer a versão 
-
 
 ## *Arquivos da versão original:*
 ---------------------------------------------------------------------
-* [frescobol.ino](https://drive.google.com/open?id=1IfIijcZMfmG5VjZHAePnsniMEEECiUC2)
-* [serial.c.h](https://drive.google.com/open?id=1vRsz_n9iXdh7xdED7TM6-yiZDOYG_6ln)
-* [pt.c.h](https://drive.google.com/open?id=1YhX42NDzzATDHIvR7276KoYw6jTPIdkr)
-* [tv.c.h](https://drive.google.com/open?id=1IOD05V6JS8LNATIkKeeQu03WjPRobs9h)
-* [pitches.c.h](https://drive.google.com/open?id=1INsqrSP8M0tqQcELWQ9Lyw1x0xohcZas)
+Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão original mais recente;
 
-<!-- Formato de texto: https://guides.github.com/features/mastering-markdown/#examples
 
-1. # GITHUB Github 
-2. ## GITHUB Github
-3. **GITHUB Github**
-4. ###### GITHUB Github 
-5. _GITHUB Github_
-6. **_GITHUB Github_** 
-7. *GITHUB Github* 
-8. *_GITHUB Github_* 
-
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
- *This text will be italic*
-_This will also be italic_
-
-**This text will be bold**
-__This will also be bold__
-
-_You **can** combine them_
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
-  1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-http://github.com - automatic!
-[GitHub](http://github.com)
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-I think you should use an
-`<addr>` element here instead.
-
-Task Lists
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-
-You can also simply indent your code by four spaces:
-
-    function fancyAlert(arg) {
-      if(arg) {
-        $.facebox({div:'#foo'})
-      }
-    }
-    
-Here’s an example of Python code without syntax highlighting:
-
-def foo():
-    if not bar:
-        return True
-        
-Tables
-You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-Any number that refers to an Issue or Pull Request will be automatically converted into a link.
-
-#1
-mojombo#1
-mojombo/github-flavored-markdown#1
-
-Strikethrough
-Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
-
-Blockquotes
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-Inline code
-I think you should use an
-`<addr>` element here instead.
-
--->

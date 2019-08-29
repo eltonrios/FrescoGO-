@@ -1,12 +1,3 @@
-void Serial_Hit (u32 kmh, bool is_back) {
-    Serial.print(F("> "));
-    Serial.print(kmh);
-    if (is_back) {
-        Serial.print(F(" !"));
-    }
-    Serial.println();
-}
- 
 void Serial_Score (void) {
     u32 ps[2] = {0,0};
     u32 bests[2][2] = { {0,0}, {0,0} };
@@ -33,6 +24,7 @@ void Serial_Score (void) {
     Serial.println();
     Serial.println(F("-------------------------------------"));
     
+ /*
  //OK – TEMPO TOTAL
     sprintf_P(STR, PSTR("%10S: "), F("Tempo de Jogo........"));
     Serial.print(STR);
@@ -60,7 +52,7 @@ void Serial_Score (void) {
         Serial.print((G.time/1000));
         Serial.println(F(" seg"));
     }
-     
+    */ 
     //OK – TEMPO RESTANTE
     sprintf_P(STR, PSTR("%10S: "), F("Tempo Restante......."));
     Serial.print(STR);
@@ -87,7 +79,7 @@ void Serial_Score (void) {
     }
     
     
-    //OK – QUANTIDADE BOLAS
+    //OK – QUANTIDADE QUEDAS
     sprintf_P(STR, PSTR("%10S: "), F("Quantidade Quedas...."));
     Serial.print(STR);
     Serial.println(Falls());
@@ -133,7 +125,7 @@ void Serial_Score (void) {
     
     //OK – PONTUAÇÃO FINAL
     Serial.println(F("-------------------------------------"));    
-    sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO............"));
+    sprintf_P(STR, PSTR("%10S: "), F("PONTUAÇÃO DA DUPLA..."));
     Serial.print(STR);
     Serial.print(G.total);
     Serial.println(F(" pts"));
@@ -148,7 +140,7 @@ void Serial_Score (void) {
     Serial.print(G.ps[0]/100);
     Serial.println(F(" pts"));
         //Não mostra se não estiver marcando destrezas
-        if (!S.potencia == 0) {
+        if (!S.maximas == 0) {
         //jogador 0
         //inicio dos valores
             int sum0 = 0;
@@ -159,7 +151,7 @@ void Serial_Score (void) {
                 Serial.print(STR);
             }
             Serial.println(F("]"));
-            Serial.println();  
+            //Serial.println();  
         
             int sum1 = 0;
             Serial.print(F("Golpes DIR [ "));
@@ -169,7 +161,7 @@ void Serial_Score (void) {
                 Serial.print(STR);
             }
             Serial.println(F("]"));
-            Serial.println();  
+            //Serial.println();  
         //fim valores segunda linha
      //fim jogador 0
      
@@ -197,7 +189,7 @@ void Serial_Score (void) {
     Serial.print(G.ps[1]/100);
     Serial.println(F(" pts"));
             //Não mostra se não estiver marcando destrezas
-        if (!S.potencia == 0) {
+        if (!S.maximas == 0) {
         //jogador 1
         //inicio dos valores
             int sum2 = 0;
@@ -208,7 +200,7 @@ void Serial_Score (void) {
                 Serial.print(STR);
             }
             Serial.println(F("]"));
-            Serial.println();  
+            //Serial.println();  
         
             int sum3 = 0;
             Serial.print(F("Golpes DIR [ "));
@@ -218,7 +210,7 @@ void Serial_Score (void) {
                 Serial.print(STR);
             }
             Serial.println(F("]"));
-            Serial.println();  
+            //Serial.println();  
         //fim valores segunda linha
     //fim jogador 1  
         } else {
@@ -243,19 +235,21 @@ void Serial_Score (void) {
     Serial.println(S.juiz);
     Serial.println(F("-------------------------------------")); 
     
-    sprintf_P(STR, PSTR("(V%d%d%d/%dcm/%ds/pot%d/equ%d/cont%d/bolas%d/max%d/sens%d)"),
+    sprintf_P(STR, PSTR("(v%d%d%d/%dcm/%ds/max%d/equ%d/cont%d/bolas%d/lim%d/sens%d)"),
                 MAJOR, MINOR, REVISION,
                 S.distancia,
                 (int)(S.timeout/1000),
-                (int)S.potencia,
+                (int)S.maximas,
                 (int)S.equilibrio,
                 (int)CONT_PCT,
                 (int)ABORT_FALLS,
-                (int)S.maxima,
+                (int)S.limite,
                 (int)S.sensibilidade);
     Serial.println(STR);
     Serial.println(F(" "));
 }
+
+
 
 void Serial_Log (void) {
     int ball  = 0;
@@ -326,13 +320,13 @@ void Serial_Log (void) {
     
     //Serial.println();
     u32 bests[2][2] = { {0,0}, {0,0} };
-    if (S.potencia) {
+    if (S.maximas) {
         for (int i=0; i<2; i++) {
             for (int j=0; j<2; j++) {
                 int sum = 0;
                 for (int k=0; k<HITS_BESTS; k++) {
                     s8 v = G.bests[i][j][k];
-                    if (!S.potencia) {
+                    if (!S.maximas) {
                         v = POT_VEL;
                     }
                     sum += v;
@@ -356,6 +350,8 @@ void Serial_Log (void) {
     sprintf_P(STR, PSTR("%10s: %5ld + %5ld + %5ld = %5ld pts"),
         S.names[1], ps[1]/100, bests[1][0]/100, bests[1][1]/100, p1/100);
     Serial.println(STR);
+    Serial.println();
+    Serial.println(F("-------------------------------------"));
     Serial.println();
  
     u32 avg   = (p0 + p1) / 2;
@@ -418,7 +414,7 @@ void Serial_Log (void) {
 int Serial_Check (void) {
     static char CMD[32];
     static int  i = 0;
- 
+
     char c;
     while (Serial.available()) {
         c = Serial.read();
@@ -436,8 +432,12 @@ int Serial_Check (void) {
     return IN_NONE;
 _COMPLETE:
     i = 0;
- 
-    if (strncmp_P(CMD, PSTR("restaurar"), 9) == 0) {
+
+    if (strncmp_P(CMD, PSTR("modo cel"), 8) == 0) {
+        S.modo = MODE_CEL;
+    } else if (strncmp_P(CMD, PSTR("modo pc"), 7) == 0) {
+        S.modo = MODE_PC;
+    } else if (strncmp_P(CMD, PSTR("restaurar"), 9) == 0) {
         return IN_RESET;
     } else if (strncmp_P(CMD, PSTR("reiniciar"), 9) == 0) {
         return IN_RESTART;
@@ -456,22 +456,18 @@ _COMPLETE:
         S.timeout = ((u32)atoi(&CMD[6])) * 1000;
     } else if (strncmp_P(CMD, PSTR("distancia "), 5) == 0) {
         S.distancia = atoi(&CMD[10]);
-    } else if (strncmp_P(CMD, PSTR("velocidades sim"), 15) == 0) {
-        S.velocidades = 1;
-    } else if (strncmp_P(CMD, PSTR("velocidades nao"), 15) == 0) {
-        S.velocidades = 0;
-    } else if (strncmp_P(CMD, PSTR("potencia sim"), 12) == 0) {
-        S.potencia = 1;
-    } else if (strncmp_P(CMD, PSTR("potencia nao"), 12) == 0) {
-        S.potencia = 0;
+    } else if (strncmp_P(CMD, PSTR("maximas sim"), 11) == 0) {
+        S.maximas = 1;
+    } else if (strncmp_P(CMD, PSTR("maximas nao"), 11) == 0) {
+        S.maximas = 0;
     } else if (strncmp_P(CMD, PSTR("equilibrio sim"), 14) == 0) {
         S.equilibrio = 1;
     } else if (strncmp_P(CMD, PSTR("equilibrio nao"), 14) == 0) {
         S.equilibrio = 0;
-    } else if (strncmp_P(CMD, PSTR("maxima "), 7) == 0) {
-        S.maxima = atoi(&CMD[7]);
+    } else if (strncmp_P(CMD, PSTR("limite "), 7) == 0) {
+        S.limite = atoi(&CMD[7]);
     } else if (strncmp_P(CMD, PSTR("sensibilidade "), 13) == 0) {
-        S.sensibilidade = atoi(&CMD[13]);        
+        S.sensibilidade = min(SENS_MAX, atoi(&CMD[13]));
 /*
     } else if (strncmp_P(CMD, PSTR("continuidade "), 13) == 0) {
         S.continuidade = atoi(&CMD[13]);
@@ -494,40 +490,10 @@ _COMPLETE:
         } else {
             goto ERR;
         }
-#if 0
-    } else if (strncmp_P(CMD, PSTR("+queda"), 6) == 0) {
-        if (S.dts[S.hit] == HIT_MARK) {
-            goto ERR;
-        }
-        while (1) {
-            S.hit += 1;
-            if (S.dts[S.hit]==HIT_MARK or S.dts[S.hit]==HIT_SERV) {
-                break;
-            }
-        }
-    } else if (strncmp_P(CMD, PSTR("-1"), 2) == 0) {
-        if (S.hit > 0) {
-            S.hit -= 1;
-            if (S.dts[S.hit] == HIT_NONE) {
-                S.hit -= 1;
-            }
-        } else {
-            goto ERR;
-        }
-    } else if (strncmp_P(CMD, PSTR("+1"), 2) == 0) {
-        if (S.dts[S.hit] != HIT_MARK) {
-            S.hit += 1;
-            if (S.dts[S.hit] == HIT_SERV) {
-                S.hit += 1;    // skip HIT_NONE
-            }
-        } else {
-            goto ERR;
-        }
-#endif
     } else {
         goto ERR;
     }
- 
+
     if (0) {
 ERR:;
         Serial.println(F("err"));
@@ -537,8 +503,9 @@ OK:;
     }
     EEPROM_Save();
     PT_All();
-    Serial_Score();
-    TV_All("CMD", 0, 0, 0);
- 
+    if (S.modo==MODE_CEL) {
+        Serial_Score();
+    }
+
     return IN_NONE;
 }

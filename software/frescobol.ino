@@ -1,9 +1,8 @@
-#define MAJOR 1
-#define MINOR 10
+#define MAJOR    1
+#define MINOR    11
 #define REVISION 1
 
 //#define DEBUG
-//#define TV_ON
 
 #ifdef DEBUG
 #define assert(x) \
@@ -27,26 +26,6 @@ typedef char  s8;
 typedef short s16;
 typedef unsigned long u32;
 
-#ifdef TV_ON
-
-#include <TVout.h>
-#include <pollserial.h>
-#include <fontALL.h>
-#define Serial      pserial
-#define delay       TV.delay
-#define millis      TV.millis
-#define tone(x,y,z) TV.tone(y,z)
-#define DX  184
-#define DY   64
-#define FX    4
-#define FY    6
-static TVout TV;
-static pollserial pserial;
-
-#else // !TV_ON
-
-#endif
-
 #if 1
 #define PIN_LEFT  4
 #define PIN_RIGHT 2
@@ -57,15 +36,13 @@ static pollserial pserial;
 #define PIN_CFG   2
 #endif
 
-#ifdef ARDUINO_AVR_NANO
 #define PIN_TONE 11
-#endif
 
 static const int MAP[2] = { PIN_LEFT, PIN_RIGHT };
 
 #define REF_TIMEOUT     180         // 3 mins
 #define REF_BESTS       7
-#define REF_CONT       30          // 3.0%
+#define REF_CONT        30          // 3.0%
 #define REF_ABORT       10          // 10s per fall
 
 #define HITS_MAX        600
@@ -85,6 +62,7 @@ static const int MAP[2] = { PIN_LEFT, PIN_RIGHT };
 #define STATE_TIMEOUT   2
 
 #define NAME_MAX        20
+#define SENS_MAX        220
 
 #define POT_BONUS       3
 #define POT_VEL         50
@@ -97,16 +75,17 @@ static bool IS_BACK;
 static char STR[100];
 
 typedef struct {
+    u8   modo;                  // = MODE_CEL
+
     char juiz[NAME_MAX+1];      // = "Juiz"
     char names[2][NAME_MAX+1];  // = { "Atleta ESQ", "Atleta DIR" }
     u32  timeout;               // = 180 * ((u32)1000) ms
     u16  distancia;             // = 700 cm
-    s8   potencia;              // = sim/nao
+    s8   maximas;               // = sim/nao
     s8   equilibrio;            // = sim/nao
-    //u8   continuidade;          // = 3%
-    s8   velocidades;           // = sim/nao
-    u8   maxima;                // = 85 kmh
+    u8   limite;                // = 85 kmh
     u16  sensibilidade;         // = 180  (minimum time to hold for back)
+
     u16  hit;
     s8   dts[HITS_MAX];         // cs (ms*10)
 } Save;
@@ -138,23 +117,20 @@ enum {
     IN_RESET
 };
 
+enum {
+    MODE_PC,
+    MODE_CEL
+};
+
 int Falls (void) {
     return G.servs - (STATE==STATE_IDLE ? 0 : 1);
                         // after fall
 }
 
-int  PT_Bests (s8* bests, int* min_, int* max_);
-void PT_All   (void);
 #include "pt.c.h"
-
-void TV_All (const char* str, int p, int kmh, int is_back);
-#include "tv.c.h"
-
-void Serial_Hit   (char* name, u32 kmh, bool is_back);
-void Serial_Score (void);
-void Serial_Log   (void);
-int  Serial_Check (void);
 #include "serial.c.h"
+#include "xcel.c.h"
+#include "pc.c.h"
 
 void Sound (s8 kmh) {
     if (kmh < 40) {
@@ -252,7 +228,7 @@ void EEPROM_Load (void) {
         u32 kmh_ = ((u32)36) * S.distancia / (dt*10);
                    // prevents overflow
         G.kmhs[i] = min(kmh_, HIT_KMH_MAX);
-        G.kmhs[i] = min(G.kmhs[i], S.maxima);
+        G.kmhs[i] = min(G.kmhs[i], S.limite);
     }
 }
 
@@ -263,17 +239,16 @@ void EEPROM_Save (void) {
 }
 
 void EEPROM_Default (void) {
+    S.modo          = MODE_CEL;
     strcpy(S.juiz,     "?");
     strcpy(S.names[0], "Atleta ESQ");
     strcpy(S.names[1], "Atleta DIR");
     S.distancia     = 750;
     S.timeout       = REF_TIMEOUT * ((u32)1000);
-    S.potencia      = 0;
+    S.maximas       = 0;
     S.equilibrio    = 1;
-    //S.continuidade = 3;
-    S.velocidades   = 1;
-    S.maxima        = 85;
-    S.sensibilidade = 220;
+    S.limite        = 85;
+    S.sensibilidade = SENS_MAX;
 }
 
 void setup (void) {
@@ -281,13 +256,7 @@ void setup (void) {
     pinMode(PIN_LEFT,  INPUT_PULLUP);
     pinMode(PIN_RIGHT, INPUT_PULLUP);
 
-#ifdef TV_ON
-    TV.begin(PAL,DX,DY);
-    TV.select_font(font4x6);
-    TV.set_hbi_hook(Serial.begin(9600));
-#else
     Serial.begin(9600);
-#endif
 
     EEPROM_Load();
 }
@@ -307,32 +276,37 @@ u32 alarm (void) {
     }
 }
 
+#define MODE(xxx,yyy)   \
+    switch (S.modo) {   \
+        case MODE_CEL:  \
+            xxx;        \
+            break;      \
+        case MODE_PC:   \
+            yyy;        \
+            break;      \
+    }
+
 void loop (void)
 {
 // RESTART
-    Serial.print(F("= FrescoGO! by EGR (versao "));
-    Serial.print(MAJOR);
-    Serial.print(".");
-    Serial.print(MINOR);
-    Serial.print(".");
-    Serial.print(REVISION);
-    Serial.println(F(") ="));
     STATE = STATE_IDLE;
     PT_All();
-    TV_All("GO!", 0, 0, 0);
-    Serial_Score();
-    u32 al_nxt = alarm();
+
+    MODE(CEL_Restart(), PC_Restart());
 
     while (1)
     {
 // GO
         PT_All();
+
+        MODE(CEL_Nop(), PC_Seq());
+
         if (G.time >= S.timeout) {
             goto _TIMEOUT;          // if reset on ended game
         }
         if (Falls() >= ABORT_FALLS) {
             goto _TIMEOUT;
-        }        
+        }
 
         int got;
         while (1) {
@@ -362,8 +336,7 @@ void loop (void)
                 delay(310);
                 EEPROM_Save();
                 PT_All();
-                TV_All("GO!", 0, 0, 0);
-                Serial_Score();
+                MODE(Serial_Score(), PC_Seq());
 
 /* No TIMEOUT outside playing: prevents falls miscount.
             } else if (got == IN_TIMEOUT) {
@@ -374,8 +347,7 @@ void loop (void)
             }
         }
         tone(PIN_TONE, NOTE_C7, 500);
-        TV_All("GO!", 0, 0, 0);
-        Serial_Score();
+        MODE(Serial_Score(), PC_Nop());
 
 // SERVICE
         while (1) {
@@ -410,12 +382,9 @@ void loop (void)
 
         IS_BACK = false;
 
-        if (S.velocidades) {
-            Serial.println(F("> saque"));
-        }
+        MODE(CEL_Service(), PC_Hit(1-got,false,0));
 
         PT_All();
-        TV_All("---", 0, 0, 0);
         delay(HIT_MIN_DT);
 
         int nxt = 1 - got;
@@ -462,24 +431,21 @@ void loop (void)
             u32 kmh_ = ((u32)36) * S.distancia / (dt*10);
                        // prevents overflow
             s8 kmh = min(kmh_, HIT_KMH_MAX);
-            kmh = min(kmh_, S.maxima);
+            kmh = min(kmh_, S.limite);
 
             u8 al_now = 0;
-            if (G.time > al_nxt) {
+            if (G.time+dt*10 > alarm()) {
                 tone(PIN_TONE, NOTE_C7, 250);
                 al_now = 1;
-                al_nxt = alarm();
             } else {
                 Sound(kmh);
             }
 
-            if (S.velocidades) {
-                if (nxt != got) {
-                    Serial_Hit(kmh, IS_BACK);
-                    Serial_Hit(kmh, false);
-                } else {
-                    Serial_Hit(kmh, IS_BACK);
-                }
+            if (nxt != got) {
+                MODE(CEL_Hit(kmh, IS_BACK), PC_Hit(1-got,IS_BACK,kmh));
+                MODE(CEL_Hit(kmh, false)  , PC_Hit(  got,false,  kmh));
+            } else {
+                MODE(CEL_Hit(kmh, IS_BACK), PC_Hit(1-got,IS_BACK,kmh));
             }
 
             if (IS_BACK) {
@@ -497,7 +463,7 @@ void loop (void)
             nxt = 1 - got;
 
             PT_All();
-            TV_All(NULL, 1-got, kmh, IS_BACK);
+            MODE(CEL_Nop(), PC_Tick());
 
 // TIMEOUT
             if (G.time >= S.timeout) {
@@ -526,7 +492,7 @@ void loop (void)
                         u32 avg = (p0 + p1) / 2;
                         u32 m   = min(p0,p1);
                         if (G.time >= 30000) {
-                            if (kmh>60 && m*11/10<avg) {
+                            if (kmh>60 && PT_Behind()!=-1) {
                                 if (p0>p1 && nxt==0 || p1>p0 && nxt==1) {
                                     tone(PIN_TONE, NOTE_C3, 30);
                                 }
@@ -555,14 +521,11 @@ _FALL:
         delay(310);
 
         PT_All();
-        TV_All("QUEDA", 0, 0, 0);
-        Serial.println(F("QUEDA"));
-        Serial_Score();
+        MODE(CEL_Fall(), PC_Fall());
         EEPROM_Save();
 
         if (Falls() >= ABORT_FALLS) {
             S.dts[S.hit++] = HIT_SERV;  // simulate timeout after service
-
         }
     }
 
@@ -570,9 +533,7 @@ _TIMEOUT:
     STATE = STATE_TIMEOUT;
     tone(PIN_TONE, NOTE_C2, 2000);
     PT_All();
-    TV_All("FIM", 0, 0, 0);
-    Serial.println(F("= FIM ="));
-    Serial_Score();
+    MODE(CEL_End(), PC_End());
     EEPROM_Save();
 
     while (1) {
@@ -590,6 +551,4 @@ _RESTART:
     S.hit = 0;
     EEPROM_Save();
 }
-
-
 

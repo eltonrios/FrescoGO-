@@ -16,6 +16,8 @@ Selecione a versão compatível com o sistema operacional do PC e baixe a mesma;
 ![Seleção do arduino](images/download_Processing.PNG "download")
 ![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
 ![download](images/arduino_select.png "Seleção do arduino")
+![Carregar](images/transferir.PNG "Carregar")
+
 
 Depois extraia os arquivos... isso pode levar um tempinho... e pronto, agora vamos carregar o placar;
 

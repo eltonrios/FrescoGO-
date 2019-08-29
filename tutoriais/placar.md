@@ -32,3 +32,6 @@ Primeiramente precisamos ajustar a porta de comunicação (você já viu isso du
 Na linha 35 você pode ajustar o tamanho da janela do placar, no exemplo abaixo, foi ajustado em 1280x720 (que, no caso, é a definição da tela do computador utilizado), mas ainda existe a opção de **full screen**,  bastando habilitar a linha 34 (retirando o “//” no início da linha) e desabilitando a linha 35 (inserindo o “//”).
 Nas linhas 36, 37 e 38 tem-se opção para três tamanhos da logo, que você pode ajustar, conforme a escolha utilizada nas linha 34 e 35.
 
+![Definição](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definição_tela.PNG "definição")
+
+Agora clique no botão indicado na imagem abaixo

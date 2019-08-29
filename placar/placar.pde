@@ -1,6 +1,7 @@
 //String  CFG_PORTA   = "/dev/ttyUSB0";
-String  CFG_PORTA   = "COM12";
-boolean CFG_MAXIMAS = false;
+String  CFG_PORTA   = "COM12"; //Ajuste aqui a porta de comunicação
+boolean CFG_MAXIMAS = false;   //Máximas desligadas
+//boolean CFG_MAXIMAS = true;   //Máximas ligadas
 
 import processing.serial.*;
 
@@ -29,7 +30,7 @@ void setup () {
   //SERIAL.clear();
   //SERIAL = new Serial(this, Serial.list()[0], 9600);
 
-  surface.setTitle("FrescoGO! V.1.11");
+  surface.setTitle("FrescoGO! V.1.11.1");
   //fullScreen();
   size(1280, 720);
   IMG = loadImage("data/fresco.png"); // 1024x768 / 1280x720 / 

@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-# FrescoGO! by EGR (versão 1.91)
+# FrescoGO! by EGR (versão 1.11.1)
 
 *FrescoGO!* é um marcador eletrônico semi-automático para treinamento e
 competições de Frescobol. 
@@ -57,7 +57,7 @@ Quesitos de pontuação:
         - 70 kmh vale **49 pontos**: `70x70/100 = 4900/100 = 49`.
         - 80 kmh vale **64 pontos**: `80x80/100 = 6400/100 = 64`.
         - 90 kmh vale **81 pontos**: `90x90/100 = 8100/100 = 81`.
-- **Potência:**
+- **Máximas:**
     - Para um jogo de 3 minutos (180 segundos), as médias dos 7 golpes 
       mais velozes de **direita** e de **esquerda** (*forehand* e *backhand*)
       de cada atleta são contabilizados conforme a fórmula de *Volume* (demonstrado
@@ -162,7 +162,6 @@ Quedas...............: 2320 pts (-)                <-- Desconto pelas quedas
 Velocidade Média.....: 69 km/h                     <-- Velocidade Média (simples)
 PONTUAÇÃO FINAL......: 12657 pts                   <-- Pontuação após aplicadas as penalizações acima
 -------------------------------------------------
-Tempo de Jogo........: 182 s                       <-- Tempo decorrido de jogo (bola no ar)
 Tempo Restante.......: 0 s                         <-- Tempo que resta de jogo
 -------------------------------------------------
 Quantidade Quedas....: 5                           <-- Quantidade de bolas ao chão
@@ -337,14 +336,14 @@ FINAL:       6665                       <-- Pontuação final da dupla
             - Exemplo:
                 - `distancia 800`
                 - altera a distância para 8 metros
-        - `maxima VEL`
+        - `limite VEL`
             - altera a velocidade máxima a ser considerada para `VEL`, que deve
               ser um número em kmh (bolas acima de `VEL` serão consideradas
               como `VEL`)
             - Exemplo:
                 - `maxima 90`
                 - bolas acima de 90 kmh serão interpretadas como 90 kmh
-        - `potencia SIM/NAO`
+        - `maximas SIM/NAO`
             - liga ou desliga a pontuação de potência (`nao=desligada`, `sim=ligada`)
             Obs: No rodapé de configurações irá aparecer pot=0 quando desligada, 
             e pot=1 quando ligada.

@@ -27,7 +27,7 @@ O ambiente Processing será carregado, já com a aplicação PLACAR, e agora vam
 
 Primeiramente precisamos ajustar a porta de comunicação (você já viu isso durante a atualização do firmware), e para isso, vá na linha 2 (vide figura abaixo) e ajuste o número da porta (não apague nada, não insira espaços... apenas troque o número, se necessário).
 
-![Porta](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/porta.PNG "porta")
+![Porta](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/porta.png "porta")
 
 Na linha 35 você pode ajustar o tamanho da janela do placar, no exemplo abaixo, foi ajustado em 1280x720 (que, no caso, é a definição da tela do computador utilizado), mas ainda existe a opção de **full screen**,  bastando habilitar a linha 34 (retirando o “//” no início da linha) e desabilitando a linha 35 (inserindo o “//”).
 Nas linhas 36, 37 e 38 tem-se opção para três tamanhos da logo, que você pode ajustar, conforme a escolha utilizada nas linha 34 e 35.

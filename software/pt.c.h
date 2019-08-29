@@ -1,16 +1,22 @@
-int PT_Bests (s8* bests, int* min_, int* max_) {
+int PT_Bests (s8* bests, int* avg, int* min_, int* max_) {
     *min_ = bests[HITS_BESTS-1];
     *max_ = bests[0];
+    int sum = 0;
+    int ret = HITS_BESTS;
     for (int i=0; i<HITS_BESTS; i++) {
-        if (bests[i] == 0) {
-            return i;
+        s8 v = bests[i];
+        if (v == 0) {
+            ret = i;
+            break;
         }
+        sum += v;
     }
-    return HITS_BESTS;
+    *avg = sum/HITS_BESTS;
+    return ret;
 }
 
 void PT_Bests_Apply (void) {
-      if (! S.potencia) {
+    if (! S.maximas) {
         return;
     }
     for (int i=0; i<2; i++) {
@@ -18,7 +24,7 @@ void PT_Bests_Apply (void) {
             int sum = 0;
             for (int k=0; k<HITS_BESTS; k++) {
                 s8 v = G.bests[i][j][k];
-                if (!S.potencia) {
+                if (!S.maximas) {
                     v = POT_VEL;
                 }
                 sum += v;
@@ -26,6 +32,22 @@ void PT_Bests_Apply (void) {
             int avg = sum / HITS_BESTS;
             G.ps[i] += avg*avg * POT_BONUS * HITS_BESTS;
         }
+    }
+}
+
+int PT_Behind (void) {
+    u32 p0  = G.ps[0];
+    u32 p1  = G.ps[1];
+    u32 avg = (p0 + p1) / 2;
+    u32 m   = min(p0,p1);
+    if (m * 11/10 < avg) {
+        if (p0 < p1) {
+            return 0;   // atleta a esquerda atras
+        } else {
+            return 1;   // atleta a direita  atras
+        }
+    } else {
+        return -1;      // equilibrio
     }
 }
 

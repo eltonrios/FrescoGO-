@@ -34,4 +34,19 @@ Nas linhas 36, 37 e 38 tem-se opção para três tamanhos da logo, que você pod
 
 ![Definição](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.PNG "definição")
 
-Agora clique no botão indicado na imagem abaixo
+Agora clique no botão indicado na imagem abaixo:
+
+![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.PNG "executa")
+
+Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo ou limite de bolas) o programa fará um print automático da tela e irá gerar o relatório, também automaticamente, ficando ambos salvos na pasta indicada abaixo (esse processo leva uns 30 segundos).
+
+1. Não há necessidade de trocar de aparelho (FrescoGO) entre um jogo e outro, a menos que você precise fazer alterações nas configurações;
+2. A mudança dos nomes dos jogadores pode ser feita a partir do teclado do computador, usando **CTRL+E** para digitar o nome do jogador da esquerda, seguido de ENTER, depois use **CTRL+D** e entre com o nome da direita, teclando ENTER para confirmar;
+
+Lembrando que essa configuração do FrescoGO vc pode fazer usando um celular ou, como já está com o Arduino IDE aberto, através do Monitor Serial
+
+Feito isso você vai passar o último comando para o FrescoGO... digite modo pc
+Pronto... mágica realizada!!! Mas a partir de agora, lembre-se que o celular e o Monitor Serial só te servirão para envio de comandos... nada mais.
+
+![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG "relatorios")
+

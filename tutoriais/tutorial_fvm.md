@@ -27,24 +27,12 @@
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
-**1.** Clique [aqui] (https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
+**1.** Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
 
-![Baixar](images/baixar.png "Baixar")
 
-Ou clique no símbolo de download, no canto à direita, ao alto;
-
-![Baixar](images/arquivos.png "Baixar")
-
-* [frescobol.ino](https://drive.google.com/open?id=1Fb_TF2j-QyqSphrUwY-CP-XjrCwAdf5V)
-* [serial.c.h](https://drive.google.com/open?id=1Iq9AlQC8oSacIjJYV2lWPhKiD9b-tOO7)
-* [pt.c.h](https://drive.google.com/open?id=1DEQPcw_YgEUsZR4n0vqcVv7TughPUBUn)
-* [tv.c.h](https://drive.google.com/open?id=1HTg7Kht436ycgKcQ-4MVP3I7ID6ovtX5)
-* [pitches.c.h](https://drive.google.com/open?id=1DwXQfjGVI-kqA2N-SM96iDQIu7humBmO
-) 
-
-_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. Os links dos arquivos da versão original podem ser encontrados no final deste tutorial._ 
+_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. O link para baixar a versão original pode ser encontrado no final deste tutorial._ 
  
-**2.** Entre na pasta criada acima e dê dois cliques no arquivo "**frescobol.ino**", isso fará com que seja aberto o **IDE Arduino** e todo o pacote carregado automaticamente;
+**2.** Entre na pasta criada ("aparelho-master"), depois na pasta "software", em seguida dê dois cliques no arquivo "**software.ino**", isso fará com que seja aberto o **IDE Arduino** e todo o pacote carregado automaticamente;
 
 **3.** Conecte seu dispositivo *FrescoGO* numa entrada USB do computador;
 

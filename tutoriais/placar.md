@@ -14,5 +14,5 @@ Depois disso será necessário preparar o PC para receber o FrescoGO, e para iss
 Selecione a versão compatível com o sistema operacional do PC e baixe a mesma;
 
 ![download](images/download_Processing.PNG "download")
-
+![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
 

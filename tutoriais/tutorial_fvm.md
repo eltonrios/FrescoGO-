@@ -27,8 +27,7 @@
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
-**1.** Crie em seu computador uma pasta denominada "**frescobol**" e baixe para a mesma os arquivos abaixo.
-Clique em DOWNLOAD caso apareça a imagem abaixo;
+**1.** Clique [aqui] (https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
 
 ![Baixar](images/baixar.png "Baixar")
 

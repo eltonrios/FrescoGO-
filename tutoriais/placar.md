@@ -13,14 +13,12 @@ Depois disso será necessário preparar o PC para receber o FrescoGO, e para iss
 
 Selecione a versão compatível com o sistema operacional do PC e baixe a mesma;
 
-![Seleção do arduino](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/download_Processing.PNG "download")
-![Seleção do arduino](images/arduino_select.png "Seleção do arduino")
-![download](images/arduino_select.png "Seleção do arduino")
-![Carregar](images/download_Processing.PNG "Carregar")
-
+![Download](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/download_Processing.PNG "download")
 
 Depois extraia os arquivos... isso pode levar um tempinho... e pronto, agora vamos carregar o placar;
 
 Volte na pasta FrescoGO_Up-master que foi criada durante a atualização do firmware, dê 2 cliques sobre ela e entre na pasta [placar].
 
 Clique  agora em **placar.pde**
+
+![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/executa.png "executa")

@@ -21,4 +21,10 @@ Volte na pasta FrescoGO_Up-master que foi criada durante a atualização do firm
 
 Clique  agora em **placar.pde**
 
-![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/executa.png "executa")
+![Icone](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/icone_processing.PNG "icone")
+
+O ambiente Processing será carregado, já com a aplicação PLACAR, e agora vamos ajustar umas pequenas coisas.
+
+Primeiramente precisamos ajustar a porta de comunicação (você já viu isso durante a atualização do firmware), e para isso, vá na linha 2 (vide figura abaixo) e ajuste o número da porta (não apague nada, não insira espaços... apenas troque o número, se necessário).
+
+![Porta](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/porta.PNG "porta")

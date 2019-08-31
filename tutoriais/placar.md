@@ -39,13 +39,13 @@ Na linha 33 estará escrito "size(640, 480);" e aí você pode ajustar você pod
 
 Agora clique no botão indicado na imagem abaixo:
 
-![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/executa.png"executa")
+![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/executa.png "executa")
 
 A configuração do FrescoGO vc pode fazer usando um celular ou, como já está com o Arduino IDE aberto, através do Monitor Serial. Após concluída, digite **modo pc** e envie... pronto, a partir de agora o celular e o Monitor Serial só te servirão para envio de comandos... nada mais.
 
 Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo ou limite de bolas) o programa fará um print automático da tela e irá gerar o relatório, também automaticamente, ficando ambos salvos na pasta indicada abaixo (esse processo leva uns 30 segundos).
 
-![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG"relatorios")
+![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG "relatorios")
 
 **ATENÇÃO:**
 1. Não há necessidade de trocar de aparelho (FrescoGO) entre um jogo e outro, a menos que você precise fazer alterações nas configurações;

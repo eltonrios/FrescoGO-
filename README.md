@@ -5,8 +5,8 @@
 *FrescoGO!* é um marcador eletrônico semi-automático para treinamento e
 competições de Frescobol. 
 
-Esta versão apresentada aqui é derivada da versão original, que pode ser 
-encontrada em https://github.com/frescogo/frescogo.
+**Esta versão apresentada aqui é derivada da versão original, que pode ser 
+encontrada em https://github.com/frescogo/frescogo.**
 
 O aparelho marcador contém dois botões de marcação: um para o atleta à esquerda
 e um para o atleta à direita.
@@ -178,15 +178,16 @@ Pontuação............: 14063 pts                   <-- Pontuação bruta acumu
 Golpes ESQ [ 100 100 100 100 100 100 100 ] => 100  <-- golpes de esquerda mais fortes => média simples
 Golpes DIR [ 100 100  87  84  84  79  79 ] => 87   <-- golpes de direita mais fortes => média simples
 -------------------------------------------------
-(v1.72/800cm/180s/pot=0/equ=1/cont=30/fim=18/max=85)    <-- Rodapé de configurações do jogo
+(v1.72/800cm/180s/max0/equ1/cont30/fim18/lim85/sen220)    <-- Rodapé de configurações do jogo
     \-- versão do software
-         \-- distância entre os ateltas
-               \-- tempo máximo de apresentação
-                     \-- pontuação de potência (0=desligada, 1=ligada)
-                           \-- pontuação de equilíbrio
-                                 \-- desconto por queda (30=3%)
-                                        \-- máximo de quedas
-                                              \-- velocidade máxima a detectar
+        \-- distância entre os ateltas
+              \-- tempo máximo de apresentação
+                   \-- pontuação das máximas (0=desligada, 1=ligada)
+                         \-- pontuação de equilíbrio
+                               \-- desconto por queda (30=3%)
+                                     \-- máximo de quedas
+                                           \-- velocidade máxima a detectar
+                                                  \-- sensibilidade
 ```
 - Relatório (ao final da apresentação)
 

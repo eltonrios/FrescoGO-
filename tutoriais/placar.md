@@ -39,7 +39,7 @@ Na linha 33 estará escrito "size(640, 480);" e aí você pode ajustar você pod
 
 Agora clique no botão indicado na imagem abaixo:
 
-![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.PNG "executa")
+![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/executa.png"executa")
 
 A configuração do FrescoGO vc pode fazer usando um celular ou, como já está com o Arduino IDE aberto, através do Monitor Serial. Após concluída, digite **modo pc** e envie... pronto, a partir de agora o celular e o Monitor Serial só te servirão para envio de comandos... nada mais.
 

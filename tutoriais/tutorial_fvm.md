@@ -27,12 +27,9 @@
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
-**1.** Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/archive/master.zip) para baixar a versão mais recente;
+**1.** Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
 
-
-_Obs: A versão aqui apresentada possui diferenças em relação à original no que diz respeito ao layout de tela porém os resultados são os mesmos. Clique [aqui](https://github.com/eltonrios/FrescoGO_Up/blob/master/README.md) para conhecer essa versão. O link para baixar a versão original pode ser encontrado no final deste tutorial._ 
- 
-**2.** Extraia todos os arquivos e pastas do pacote baixado ("FrescoGO_Up-master.zip"), depois entre na pasta "FrescoGO_Up-master";
+**2.** Extraia todos os arquivos e pastas do pacote baixado ("aparelho-master.zip"), depois entre na pasta "aparelho-master";
 
 **3.** Entre na pasta "software" e em seguida dê dois cliques no arquivo "**software.ino**", isso fará com que seja aberta a aplicação **IDE Arduino** e todo o pacote carregado automaticamente;
 
@@ -69,8 +66,6 @@ _Obs: A versão aqui apresentada possui diferenças em relação à original no 
 **b.** Em alguns casos pode ser necessário o *reset* (pressione os três botoões por cerca de 5 segundos).
 
 
-## *Arquivos da versão original:*
----------------------------------------------------------------------
-Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão original mais recente;
+
 
 

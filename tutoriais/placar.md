@@ -52,6 +52,6 @@ Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo 
 2. A mudança dos nomes dos jogadores pode ser feita a partir do teclado do computador, usando **CTRL+E** para digitar o nome do jogador da esquerda, seguido de ENTER, depois use **CTRL+D** e entre com o nome da direita, teclando ENTER para confirmar;
 3. O descréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
 
-
+ 
 
 

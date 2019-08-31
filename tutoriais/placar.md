@@ -33,6 +33,7 @@ Na linha 3 você pode desativar as MAXIMAS, bastando trocar a palavra "true" (at
 
 ![Maximas(https://github.com/eltonrios/FrescoGO_Up/blob/master/images/maximas.png "maximas")
 
+
 Na linha 33 estará escrito "size(640, 480);" e aí você pode ajustar você pode ajustar o tamanho da janela do placar, adequando à tela de seu computador, mas ainda existe a opção de **full screen**,  bastando habilitar a linha 34 (retirando o “//” no início da linha) e desabilitando a linha 33 (inserindo o “//”).
 
 ![Definição](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.png "definição")

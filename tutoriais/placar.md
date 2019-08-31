@@ -45,7 +45,7 @@ A configuração do FrescoGO vc pode fazer usando um celular ou, como já está 
 
 Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo ou limite de bolas) o programa fará um print automático da tela e irá gerar o relatório, também automaticamente, ficando ambos salvos na pasta indicada abaixo (esse processo leva uns 30 segundos).
 
-![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG "relatorios")
+![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG"relatorios")
 
 **ATENÇÃO:**
 1. Não há necessidade de trocar de aparelho (FrescoGO) entre um jogo e outro, a menos que você precise fazer alterações nas configurações;

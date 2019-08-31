@@ -29,8 +29,7 @@ Primeiramente precisamos ajustar a porta de comunicação (você já viu isso du
 
 ![Porta](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/porta.png "porta")
 
-Na linha 35 você pode ajustar o tamanho da janela do placar, no exemplo abaixo, foi ajustado em 1280x720 (que, no caso, é a definição da tela do computador utilizado), mas ainda existe a opção de **full screen**,  bastando habilitar a linha 34 (retirando o “//” no início da linha) e desabilitando a linha 35 (inserindo o “//”).
-Nas linhas 36, 37 e 38 tem-se opção para três tamanhos da logo, que você pode ajustar, conforme a escolha utilizada nas linha 34 e 35.
+Na linha 33 estará escrito "size(640, 480);" e aí você pode ajustar você pode ajustar o tamanho da janela do placar, adequando à tela de seu computador, mas ainda existe a opção de **full screen**,  bastando habilitar a linha 34 (retirando o “//” no início da linha) e desabilitando a linha 33 (inserindo o “//”).
 
 ![Definição](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.PNG "definição")
 
@@ -38,16 +37,17 @@ Agora clique no botão indicado na imagem abaixo:
 
 ![Executa](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.PNG "executa")
 
+A configuração do FrescoGO vc pode fazer usando um celular ou, como já está com o Arduino IDE aberto, através do Monitor Serial. Após concluída, digite **modo pc** e envie... pronto, a partir de agora o celular e o Monitor Serial só te servirão para envio de comandos... nada mais.
+
 Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo ou limite de bolas) o programa fará um print automático da tela e irá gerar o relatório, também automaticamente, ficando ambos salvos na pasta indicada abaixo (esse processo leva uns 30 segundos).
 
-**Lembre-se:**
+![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG "relatorios")
+
+**ATENÇÃO:**
 1. Não há necessidade de trocar de aparelho (FrescoGO) entre um jogo e outro, a menos que você precise fazer alterações nas configurações;
 2. A mudança dos nomes dos jogadores pode ser feita a partir do teclado do computador, usando **CTRL+E** para digitar o nome do jogador da esquerda, seguido de ENTER, depois use **CTRL+D** e entre com o nome da direita, teclando ENTER para confirmar;
+3. O descréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
 
-Lembrando que essa configuração do FrescoGO vc pode fazer usando um celular ou, como já está com o Arduino IDE aberto, através do Monitor Serial
 
-Feito isso você vai passar o último comando para o FrescoGO... digite modo pc
-Pronto... mágica realizada!!! Mas a partir de agora, lembre-se que o celular e o Monitor Serial só te servirão para envio de comandos... nada mais.
 
-![Relatorios](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/relatorios.PNG "relatorios")
 

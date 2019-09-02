@@ -345,13 +345,11 @@ FINAL:       6665                       <-- Pontuação final da dupla
                 - `maxima 90`
                 - bolas acima de 90 kmh serão interpretadas como 90 kmh
         - `maximas SIM/NAO`
-            - liga ou desliga a pontuação de potência (`nao=desligada`, `sim=ligada`)
-            Obs: No rodapé de configurações irá aparecer pot=0 quando desligada, 
-            e pot=1 quando ligada.
-            - caso desligada, a apresentação já iniciará com as 7 bolas de
-              esquerda e direita premarcadas a 50kmh (e nunca serão modificadas)
+            - liga ou desliga a pontuação de máximas (`nao=desligada`, `sim=ligada`)
+            Obs: No rodapé de configurações irá aparecer "max0" quando desligada, 
+            e "max1" quando ligada.
             - Exemplo:
-                - `potencia sim`
+                - `maximas sim`
                 - habilita a pontuação de potência
         - `equilibrio SIM/NAO`
             - liga ou desliga a pontuação de equlíbrio (`nao=desligada`, `sim=ligada`)

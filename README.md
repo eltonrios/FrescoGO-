@@ -58,16 +58,11 @@ Quesitos de pontuação:
         - 80 kmh vale **64 pontos**: `80x80/100 = 6400/100 = 64`.
         - 90 kmh vale **81 pontos**: `90x90/100 = 8100/100 = 81`.
 - **Máximas:**
-    - Para um jogo de 3 minutos (180 segundos), as médias dos 7 golpes 
-      mais velozes de **direita** e de **esquerda** (*forehand* e *backhand*)
-      de cada atleta são contabilizados conforme a fórmula de *Volume* (demonstrado
-      acima) e ainda são multiplicados por 21 antes de serem somados ao 
-      total do atleta.
-      
-      Obs: O número de golpes considerados como "destreza" é proporcional 
-      ao tempo estabelecido para a partida, no caso de 180 segundos, serão 
-      7 golpes de direita e 7 de esquerda, se aumentar o tempo de jogo, 
-      aumentarão o número desses golpes. 
+    - As médias dos 7 (para o caso de um jogo de 3 minutos) ou 11 (para 
+    um jogo de 5 minutos) golpes mais velozes batidos à direita e à 
+    esquerda do corpo do atleta são contabilizados conforme a fórmula de 
+    *Volume* (demonstrado acima) e ainda são multiplicados por 21 antes 
+    de serem somados ao total do atleta.
       
       Exemplo:
         - Os golpes mais velozes de um dos atleta foram os seguintes:

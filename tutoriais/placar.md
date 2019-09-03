@@ -17,6 +17,8 @@ Selecione a versão compatível com o sistema operacional do PC e baixe a mesma;
 
 Depois extraia os arquivos... isso pode levar um tempinho... e pronto, agora vamos carregar o placar;
 
+Baixe a aplicação PLACAR clicando [aqui](https://github.com/frescogo/placar/archive/master.zip "placar")
+
 Volte na pasta placar-master que foi criada durante a atualização do firmware, dê 2 cliques sobre ela e entre na pasta [placar].
 
 Clique  agora em **placar.pde**

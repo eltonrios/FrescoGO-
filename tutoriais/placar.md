@@ -19,7 +19,7 @@ Depois extraia os arquivos... isso pode levar um tempinho... e pronto, agora vam
 
 Baixe a aplicação PLACAR clicando [aqui](https://github.com/frescogo/placar/archive/master.zip "placar")
 
-Volte na pasta placar-master que foi criada durante a atualização do firmware, dê 2 cliques sobre ela e entre na pasta [placar].
+Extraia os arquivos e depois entre na pasta **placar-master** que foi criada, em seguida na sub pasta [placar].
 
 Clique  agora em **placar.pde**
 

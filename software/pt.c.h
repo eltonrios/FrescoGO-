@@ -21,6 +21,15 @@ void PT_Bests_Lado (s8* bests, Lado* lado) {
     lado->avg1 = sum1/HITS_BESTS;
     lado->avg2 = sum2/(HITS_BESTS/2);
 }
+void PT_Bests_Get (int i, Lado** reves, Lado** normal) {
+    if (G.lados[i][0].avg1 <= G.lados[i][1].avg1) {
+        *reves  = &G.lados[i][0];
+        *normal = &G.lados[i][1];
+    } else {
+        *reves  = &G.lados[i][1];
+        *normal = &G.lados[i][0];
+    }
+}
 
 void PT_Bests_All (void) {
     if (! S.maximas) {

@@ -131,7 +131,37 @@ void Serial_Score (void) {
     Serial.println(F(" pts"));
     
     //OK - PLACAR INDIVIDUAL
-    Serial.println(F("-------------------------------------"));
+    //nova versão Chico
+        for (int i=0; i<2; i++) {
+        Serial.println();
+        Serial.println(F("-----------------------------------------------"));
+        Serial.println();
+
+        sprintf_P(STR, PSTR("%10s: "), S.names[i]);
+        Serial.print(STR);
+        Serial.print(G.ps[i]/100);
+        Serial.println(F(" pts"));
+
+        for (int j=0; j<2; j++) {
+            int J = (G.lados[i][0].avg1 <= G.lados[i][1].avg1 ? j : 1-j);
+            Serial.print( (j==0) ? F(" rev ") : F(" nrm ") );
+
+            Serial.print(F(" [ "));
+            for (int k=0; k<HITS_BESTS; k++) {
+                if (j==0 && k>=HITS_BESTS/2) {
+                    Serial.print(F("   "));
+                } else {
+                    sprintf_P(STR, PSTR("%2d "), (int)G.bests[i][J][k]);
+                    Serial.print(STR);
+                }
+            }
+            Serial.print(F("] => "));
+            Serial.print( (j==0) ? G.lados[i][J].avg2 : G.lados[i][J].avg1 );
+            Serial.println(F(" kmh"));
+        }
+    }
+    //fim nova versão Chico
+    /*Serial.println(F("-------------------------------------"));
     sprintf_P(STR, PSTR("%10S: "), F("Jogador à esquerda..."));
     Serial.print(STR);
     Serial.println(S.names[0]);
@@ -228,7 +258,7 @@ void Serial_Score (void) {
     }
     //fim condição para marcar destrezas
     Serial.println(F("-------------------------------------"));
-     
+*/     
     //OK – JUIZ
     sprintf_P(STR, PSTR("%10S: "), F("Juiz................."));
     Serial.print(STR);
@@ -468,7 +498,7 @@ _COMPLETE:
     } else if (strncmp_P(CMD, PSTR("limite "), 7) == 0) {
         S.limite = atoi(&CMD[7]);
     } else if (strncmp_P(CMD, PSTR("reves "), 5) == 0) {
-        S.reves = atoi(&CMD[13]);
+        S.reves = atoi(&CMD[5]);
         if (S.reves != 0) {
             S.reves = max(REVES_MIN, min(REVES_MAX, S.reves));
         }

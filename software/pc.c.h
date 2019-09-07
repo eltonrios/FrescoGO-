@@ -16,6 +16,8 @@ void PC_Restart (void) {
     Serial.print(F(";"));
     Serial.print(S.names[1]);         // atleta a direita
     Serial.print(F(";"));
+    Serial.print(S.juiz);             // juiz
+    Serial.print(F(";"));
     Serial.println();
 }
 
@@ -30,6 +32,8 @@ void PC_Seq (void) {
     Serial.print(F(";"));
     Serial.print(S.names[1]);         // atleta a direita
     Serial.print(F(";"));
+    Serial.print(S.juiz);             // juiz
+    Serial.print(F(";"));
     Serial.println();
 }
 
@@ -40,13 +44,7 @@ void PC_Player (int I) {
     Serial.print(F(";"));
 
     Lado *reves, *normal;
-    if (G.lados[I][0].avg1 < G.lados[I][1].avg1) {
-        reves  = &G.lados[I][0];
-        normal = &G.lados[I][1];
-    } else {
-        reves  = &G.lados[I][1];
-        normal = &G.lados[I][0];
-    }
+    PT_Bests_Get(I, &reves, &normal);
 
     Serial.print(reves->tot2);      // total de revezes
     Serial.print(F(";"));
@@ -96,12 +94,16 @@ void PC_Fall (void) {
     Serial.print(Falls());            // total de quedas
     Serial.print(F(";"));
     Serial.println();
+    PC_Player(0);
+    PC_Player(1);
 }
 
 void PC_End (void) {
     Serial.print(PC_END);             // codigo de fim
     Serial.print(F(";"));
     Serial.println();
+    PC_Player(0);
+    PC_Player(1);
 }
 
 void PC_Nop (void) {

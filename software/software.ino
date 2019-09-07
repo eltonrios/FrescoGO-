@@ -1,5 +1,5 @@
 #define MAJOR    1
-#define MINOR    11
+#define MINOR    12
 #define REVISION 1
 
 //#define DEBUG
@@ -40,14 +40,14 @@ typedef unsigned long u32;
 
 static const int MAP[2] = { PIN_LEFT, PIN_RIGHT };
 
-#define REF_TIMEOUT     180         // 3 mins
-#define REF_BESTS       7
-#define REF_CONT        30          // 3.0%
-#define REF_ABORT       10          // 10s per fall
+#define REF_TIMEOUT     300         // 5 mins
+#define REF_BESTS       24
+#define REF_CONT        20          // 2%
+#define REF_ABORT       15          // 15s per fall
 
 #define HITS_MAX        600
-#define HITS_BESTS_MAX  20
-#define HITS_BESTS      (min(HITS_BESTS_MAX, (S.timeout*REF_BESTS/REF_TIMEOUT/1000)))
+#define HITS_BESTS_MAX  REF_BESTS
+#define HITS_BESTS      (max(1, min(HITS_BESTS_MAX, (S.timeout*REF_BESTS/REF_TIMEOUT/1000))))
 
 #define HIT_MIN_DT      235         // minimum time between two hits (125kmh)
 //#define HIT_KMH_MAX   125         // to fit in s8 (changed to u8, but lets keep 125)
@@ -62,9 +62,12 @@ static const int MAP[2] = { PIN_LEFT, PIN_RIGHT };
 #define STATE_TIMEOUT   2
 
 #define NAME_MAX        20
-#define SENS_MAX        220
 
-#define POT_BONUS       3
+#define REVES_OFF       0
+#define REVES_MIN       180
+#define REVES_MAX       220
+
+#define POT_BONUS       2
 #define POT_VEL         50
 
 #define CONT_PCT        (((u32)REF_TIMEOUT)*REF_CONT/(S.timeout/1000))
@@ -84,7 +87,7 @@ typedef struct {
     s8   maximas;               // = sim/nao
     s8   equilibrio;            // = sim/nao
     u8   limite;                // = 85 kmh
-    u16  sensibilidade;         // = 180  (minimum time to hold for back)
+    u16  reves;                 // = 180  (tempo minimo de segurar para o back)
 
     u16  hit;
     s8   dts[HITS_MAX];         // cs (ms*10)
@@ -92,17 +95,28 @@ typedef struct {
 static Save S;
 
 typedef struct {
+    int tot1;   // total de golpes     considerando HITS_BESTS
+    int avg1;   // media de velocidade considerando HITS_BESTS
+    int min1;   // menor velocidade    considerando HITS_BESTS
+    int tot2;   // total de golpes     considerando HITS_BESTS/2
+    int avg2;   // media de velocidade considerando HITS_BESTS/2
+    int min2;   // menor velocidade    considerando HITS_BESTS/2
+    int max_;   // maior velocidade
+} Lado;
+
+typedef struct {
     // needed on EEPROM_Load
-    u8  kmhs[HITS_MAX];              // kmh (max 125km/h)
+    u8   kmhs[HITS_MAX];              // kmh (max 125km/h)
 
     // calculated when required
-    s8  bests[2][2][HITS_BESTS_MAX]; // kmh (max 125kmh/h)
-    u32 time;                        // ms (total time)
-    u32 ps[2];                       // sum(kmh*kmh)
-    u16 hits;
-    u8  servs;
-    s8  pace[2];                     // kmh/kmh2
-    u16 total;
+    s8   bests[2][2][HITS_BESTS_MAX]; // kmh (max 125kmh/h)
+    Lado lados[2][2];
+    u32  time;                        // ms (total time)
+    u32  ps[2];                       // sum(kmh*kmh)
+    u16  hits;
+    u8   servs;
+    s8   pace[2];                     // kmh/kmh2
+    u16  total;
 } Game;
 static Game G;
 
@@ -245,10 +259,10 @@ void EEPROM_Default (void) {
     strcpy(S.names[1], "Atleta DIR");
     S.distancia     = 750;
     S.timeout       = REF_TIMEOUT * ((u32)1000);
-    S.maximas       = 0;
+    S.maximas       = 1;
     S.equilibrio    = 1;
     S.limite        = 85;
-    S.sensibilidade = SENS_MAX;
+    S.reves         = REVES_OFF;
 }
 
 void setup (void) {
@@ -298,8 +312,6 @@ void loop (void)
     {
 // GO
         PT_All();
-
-        MODE(CEL_Nop(), PC_Seq());
 
         if (G.time >= S.timeout) {
             goto _TIMEOUT;          // if reset on ended game
@@ -470,20 +482,22 @@ void loop (void)
                 goto _TIMEOUT;
             }
 
-            // sleep inside hit to reach S.sensibilidade
+            // sleep inside hit to reach S.reves
             {
+                int sensibilidade = (S.reves == 0) ? REVES_MIN : S.reves;               
                 u32 dt_ = millis() - t1;
-                if (S.sensibilidade > dt_) {
-                    delay(S.sensibilidade-dt_);
+                if (sensibilidade > dt_) {
+                    delay(sensibilidade-dt_);
                 }
+                bool is_back;
                 if (got == 0) {
-                    IS_BACK = (digitalRead(PIN_LEFT)  == LOW);
+                    is_back = (digitalRead(PIN_LEFT)  == LOW);
                 } else {
-                    IS_BACK = (digitalRead(PIN_RIGHT) == LOW);
+                    is_back = (digitalRead(PIN_RIGHT) == LOW);
                 }
                 if (!al_now)
                 {
-                    if (IS_BACK) {
+                    if (is_back) {
                         tone(PIN_TONE, NOTE_C4, 30);
                     } else if (S.equilibrio) {
                         // desequilibrio
@@ -522,6 +536,7 @@ _FALL:
 
         PT_All();
         MODE(CEL_Fall(), PC_Fall());
+        MODE(CEL_Nop(),  PC_Tick());
         EEPROM_Save();
 
         if (Falls() >= ABORT_FALLS) {
@@ -533,6 +548,7 @@ _TIMEOUT:
     STATE = STATE_TIMEOUT;
     tone(PIN_TONE, NOTE_C2, 2000);
     PT_All();
+    MODE(CEL_Nop(), PC_Tick());
     MODE(CEL_End(), PC_End());
     EEPROM_Save();
 

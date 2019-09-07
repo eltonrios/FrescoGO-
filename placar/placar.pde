@@ -10,7 +10,7 @@ Serial   SERIAL;
 
 PImage   IMG;
 
-int      DIGITANDO    = 255;  // 0=digitando ESQ, 1=digitando DIR
+int      DIGITANDO    = 255;  // 0=digitando ESQ, 1=digitando DIR, 2=digitando JUIZ
 
 int      GRAVANDO     = 0;    // 0=nao, 1=screenshot, 2=serial
 String   GRAVANDO_TS;
@@ -29,6 +29,7 @@ int      GOLPE_IDX;
 int      GOLPE_CLR;
 
 String[] NOMES        = new String[2];
+String[] NOMES        = new String[3];
 int[]    PONTOS       = new int[2];
 int[]    ULTIMAS      = new int[2];
 int[]    MAXIMAS      = new int[2];
@@ -80,6 +81,7 @@ void zera () {
 
   NOMES[0]     = "";
   NOMES[1]     = "";
+  NOMES[2]     = "";
   PONTOS[0]    = 0;
   PONTOS[1]    = 0;
   ULTIMAS[0]   = 0;
@@ -155,12 +157,15 @@ void keyPressed () {
       } else if (key == ctrl('d')) {    // CTRL-D
         DIGITANDO = 1;
         NOMES[1] = "";
+      } else if (key == ctrl('j')) {    // CTRL-J
+        DIGITANDO = 2;
+        NOMES[2] = "";
       } else if (key == ctrl('s')) {    // CTRL-S
         if (SERIAL == null) {
           serial_liga();
-        } else {
+      } else {
           serial_desliga();
-        }
+      }
       }
       break;
 
@@ -169,6 +174,9 @@ void keyPressed () {
       break;
     case 1: // DIGITANDO DIR
       trata_nome(3*W, 1, "direita");
+      break;
+    case 2: // DIGITANDO JUIZ
+      trata_nome(2*W, 2, "juiz");
       break;
   }
 }
@@ -218,6 +226,7 @@ void draw () {
       TEMPO_TOTAL  = int(campos[1]);
       NOMES[0]     = campos[2];
       NOMES[1]     = campos[3];
+      NOMES[2]     = campos[4];
       break;
     }
 
@@ -227,7 +236,8 @@ void draw () {
       QUEDAS       = int(campos[2]);
       NOMES[0]     = campos[3];
       NOMES[1]     = campos[4];
-     TEMPO_EXIBIDO = TEMPO_JOGADO;
+      NOMES[2]     = campos[5];
+      TEMPO_EXIBIDO = TEMPO_JOGADO;
      break;
     }
 
@@ -341,7 +351,8 @@ void draw_tudo (boolean is_end) {
   draw_pontos(0*W, PONTOS[0], IS_DESEQ==0);
   draw_pontos(4*W, PONTOS[1], IS_DESEQ==1);
   draw_total(PONTOS_TOTAL);
-
+  draw_juiz(NOMES[2], DIGITANDO!=2);
+  
   if (is_end) {
     fill(255,0,0);
     rect(W/2, 2.25*H, 4*W, 1.5*H);
@@ -394,6 +405,19 @@ void draw_nome (float x, String nome, boolean ok) {
   textAlign(CENTER, CENTER);
   text(nome, x+W, H+H/2-5*dy);
 }
+
+void draw_juiz (String nome, boolean ok) {
+  if (ok) {
+    fill(100,100,100);
+  } else {
+    fill(255,0,0);
+    nome = nome + "_";
+  }
+  textSize(30*dy);
+  textAlign(RIGHT, BOTTOM);
+  text("Juiz: " + nome, 4*W-5*dy, height);
+}
+
 
 void draw_quedas (int quedas) {
   stroke(0);

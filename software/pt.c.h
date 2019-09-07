@@ -1,37 +1,48 @@
-int PT_Bests (s8* bests, int* avg, int* min_, int* max_) {
-    *min_ = bests[HITS_BESTS-1];
-    *max_ = bests[0];
-    int sum = 0;
-    int ret = HITS_BESTS;
+void PT_Bests_Lado (s8* bests, Lado* lado) {
+    lado->min1 = bests[HITS_BESTS-1];
+    lado->min2 = bests[HITS_BESTS/2-1];
+    lado->max_ = bests[0];
+    int sum1 = 0;
+    int sum2 = 0;
+    lado->tot1 = HITS_BESTS;
+    lado->tot2 = HITS_BESTS/2;
     for (int i=0; i<HITS_BESTS; i++) {
         s8 v = bests[i];
         if (v == 0) {
-            ret = i;
+            lado->tot1 = i;
+            lado->tot2 = min(i, HITS_BESTS/2);
             break;
         }
-        sum += v;
+        sum1 += v;
+        if (i < HITS_BESTS/2) {
+            sum2 += v;
+        }
     }
-    *avg = sum/HITS_BESTS;
-    return ret;
+    lado->avg1 = sum1/HITS_BESTS;
+    lado->avg2 = sum2/(HITS_BESTS/2);
 }
 
-void PT_Bests_Apply (void) {
+void PT_Bests_All (void) {
     if (! S.maximas) {
         return;
     }
-    for (int i=0; i<2; i++) {
+
+    for (int i=0; i<2; i++)
+    {
+        // calcula para os dois lados HITS_BESTS e HITS_BESTS/2
         for (int j=0; j<2; j++) {
-            int sum = 0;
-            for (int k=0; k<HITS_BESTS; k++) {
-                s8 v = G.bests[i][j][k];
-                if (!S.maximas) {
-                    v = POT_VEL;
-                }
-                sum += v;
-            }
-            int avg = sum / HITS_BESTS;
-            G.ps[i] += avg*avg * POT_BONUS * HITS_BESTS;
+            PT_Bests_Lado(G.bests[i][j], &G.lados[i][j]);
         }
+
+        // pega a maior avg1 e a menor avg2
+        int avg;
+        if (G.lados[i][0].avg1 < G.lados[i][1].avg1) {
+            avg = (G.lados[i][0].avg2 + G.lados[i][1].avg1*2) / 3;
+        } else {
+            avg = (G.lados[i][1].avg2 + G.lados[i][0].avg1*2) / 3;
+        }
+
+        G.ps[i] += avg*avg * POT_BONUS;
     }
 }
 
@@ -104,7 +115,7 @@ void PT_All (void) {
     G.pace[0] = pace[0]/G.hits;
     G.pace[1] = sqrt(pace[1]/G.hits);
 
-    PT_Bests_Apply();
+    PT_Bests_All();
 
     u32 pct   = min(990, Falls()*CONT_PCT);
     u32 avg   = (G.ps[0] + G.ps[1]) / 2;

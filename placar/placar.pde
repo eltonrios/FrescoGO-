@@ -2,10 +2,7 @@
 String  CFG_PORTA   = "COM12"; //Ajuste aqui a porta de comunicação
 boolean CFG_MAXIMAS = false;   //Máximas desligadas
 //boolean CFG_MAXIMAS = true;   //Máximas ligadas
-
 ///opt/processing-3.5.3/processing-java --sketch=/data/frescogo/placar/placar --run
-
-
 
 import processing.serial.*;
 
@@ -15,11 +12,16 @@ PImage   IMG;
 
 int      DIGITANDO    = 255;  // 0=digitando ESQ, 1=digitando DIR
 
-boolean  END          = false;
+boolean  IS_SAVE      = false;
+
+boolean  IS_FIM;
+int      TEMPO_TOTAL;
+int      TEMPO_JOGADO;
 int      PONTOS_TOTAL;
 int      QUEDAS;
+int      GOLPES_TOT;
 int      GOLPES_AVG;
-int      IS_BEHIND;
+int      IS_DESEQ;
 
 int      GOLPE_IDX;
 int      GOLPE_CLR;
@@ -62,13 +64,14 @@ void setup () {
   textFont(createFont("LiberationSans-Bold.ttf", 18));
 }
 
-  draw_zera();
 void zera () {
+  IS_FIM       = false;
   TEMPO_JOGADO = 0;
   PONTOS_TOTAL = 0;
   QUEDAS       = 0;
+  GOLPES_TOT   = 0;
   GOLPES_AVG   = 0;
-  IS_BEHIND    = 255;
+  IS_DESEQ     = 255;
 
   GOLPE_IDX    = 255;
 
@@ -88,8 +91,7 @@ void zera () {
   BACKS_TOT[1] = 0;
   BACKS_AVG[0] = 0;
   BACKS_AVG[1] = 0;
-  
-  }
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // SERIAL
@@ -174,13 +176,12 @@ void keyPressed () {
 
 void draw () {
   // realiza operacoes demoradas em um frame separado
-  if (END) {
-    END = false;
+  if (IS_SAVE) {
+    IS_SAVE = false;
     save();
   }
 
   draw_tudo(false);
-
 
   if (SERIAL==null || SERIAL.available()==0) {
     return;
@@ -232,10 +233,11 @@ void draw () {
       MAXIMAS[idx] = max(MAXIMAS[idx], max(back_max,fore_max));
 
       if (is_beh) {
-        IS_BEHIND = idx;
-      } else if (IS_BEHIND == idx) {
-        IS_BEHIND = 255;
+        IS_DESEQ = idx;
+      } else if (IS_DESEQ == idx) {
+        IS_DESEQ = 255;
       }
+      
       GOLPE_IDX = idx;
       GOLPE_CLR = (is_back ? color(255,0,0) : color(0,0,255));      
       break;
@@ -263,7 +265,8 @@ void draw () {
 
     // END
     case 5: {
-      END = true; // salva o jogo no frame seguinte
+      IS_SAVE   = true; // salva o jogo no frame seguinte
+      IS_FIM    = true;
       GOLPE_IDX = 255;
       draw_tudo(true);
     }
@@ -309,8 +312,9 @@ void draw_tudo (boolean is_end) {
   draw_lado(4*W,    "Revés",  BACKS_TOT[0], BACKS_AVG[0]);
   draw_lado(4*W+W/2,"Normal", FORES_TOT[1], FORES_AVG[1]);
   draw_lado(W/2,    "Revés",  BACKS_TOT[1], BACKS_AVG[1]);
-  draw_pontos(0*W, PONTOS[0], IS_BEHIND==0);
-  draw_pontos(4*W, PONTOS[1], IS_BEHIND==1);
+  
+  draw_pontos(0*W, PONTOS[0], IS_DESEQ==0);
+  draw_pontos(4*W, PONTOS[1], IS_DESEQ==1);
   draw_total(PONTOS_TOTAL);
 
   if (is_end) {
@@ -338,7 +342,11 @@ void draw_tempo (int tempo) {
   String mins = nf(tempo / 60, 2);
   String segs = nf(tempo % 60, 2);
 
-  fill(0);
+  if (IS_FIM) {
+    fill(255,0,0);
+  } else {
+    fill(0);
+  }
   rect(W+W/2, 0, 2*W, H);
 
   fill(255);
@@ -406,18 +414,17 @@ void draw_golpes (int golpes, int media, boolean apply) {
   rect(2*W, 2*H, W, H);
 
   fill(0);
-
   textAlign(CENTER, CENTER);
   textSize(60*dy);
 
   text(golpes, 2.25*W, 2*H+H/2-25*dy);
-
 
   if (apply) {
     text(media, 2.75*W, 2*H+H/2-25*dy);
   } else {
     text("-", 2.75*W, 2*H+H/2-25*dy);
   }
+  
   textSize(25*dy);
   text("golpes", 2.25*W, 2*H+H/2+50*dy);
   text("km/h",   2.75*W, 2*H+H/2+50*dy);
@@ -429,7 +436,6 @@ void draw_maxima (float x, int maxima) {
   rect(x+2, 3*H+2, W/2-4, H-4);
 
   fill(0);
-
   textAlign(CENTER, CENTER);
   textSize(80*dy);  // Elton
   text(maxima, x+W/4, 3*H+H/2-20*dy);

@@ -275,7 +275,7 @@ void Serial_Score (void) {
                 (int)CONT_PCT,
                 (int)ABORT_FALLS,
                 (int)S.limite,
-                (int)S.sensibilidade);
+                //(int)S.sensibilidade);
     Serial.println(STR);
     Serial.println(F(" "));
 }

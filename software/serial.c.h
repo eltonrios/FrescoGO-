@@ -147,7 +147,7 @@ void Serial_Score (void) {
             Serial.print(F("Golpes ESQ [ "));
             for (int k=0; k<HITS_BESTS; k++) {
                 sum0 += G.bests[0][0][k];
-                sprintf_P(STR, PSTR("%3d "), (int)G.bests[0][0][k]);
+                sprintf_P(STR, PSTR("%2d "), (int)G.bests[0][0][k]);
                 Serial.print(STR);
             }
             Serial.println(F("]"));
@@ -157,7 +157,7 @@ void Serial_Score (void) {
             Serial.print(F("Golpes DIR [ "));
             for (int k=0; k<HITS_BESTS; k++) {
                 sum1 += G.bests[0][1][k];
-                sprintf_P(STR, PSTR("%3d "), (int)G.bests[0][1][k]);
+                sprintf_P(STR, PSTR("%2d "), (int)G.bests[0][1][k]);
                 Serial.print(STR);
             }
             Serial.println(F("]"));
@@ -171,7 +171,7 @@ void Serial_Score (void) {
             Serial.print(F("Maximas [ "));
             for (int k=0; k<HITS_BESTS; k++) {
                 sum1 += G.bests[0][1][k];
-                sprintf_P(STR, PSTR("%3d "), (int)G.bests[0][1][k]);
+                sprintf_P(STR, PSTR("%2d "), (int)G.bests[0][1][k]);
                 Serial.print(STR);
             }
             Serial.print(F("]"));
@@ -196,7 +196,7 @@ void Serial_Score (void) {
             Serial.print(F("Golpes ESQ [ "));
             for (int k=0; k<HITS_BESTS; k++) {
                 sum2 += G.bests[1][0][k];
-                sprintf_P(STR, PSTR("%3d "), (int)G.bests[1][0][k]);
+                sprintf_P(STR, PSTR("%2d "), (int)G.bests[1][0][k]);
                 Serial.print(STR);
             }
             Serial.println(F("]"));
@@ -206,7 +206,7 @@ void Serial_Score (void) {
             Serial.print(F("Golpes DIR [ "));
             for (int k=0; k<HITS_BESTS; k++) {
                 sum3 += G.bests[1][1][k];
-                sprintf_P(STR, PSTR("%3d "), (int)G.bests[1][1][k]);
+                sprintf_P(STR, PSTR("%2d "), (int)G.bests[1][1][k]);
                 Serial.print(STR);
             }
             Serial.println(F("]"));
@@ -219,7 +219,7 @@ void Serial_Score (void) {
             Serial.print(F("Maximas [ "));
             for (int k=0; k<HITS_BESTS; k++) {
                 sum3 += G.bests[1][1][k];
-                sprintf_P(STR, PSTR("%3d "), (int)G.bests[1][1][k]);
+                sprintf_P(STR, PSTR("%2d "), (int)G.bests[1][1][k]);
                 Serial.print(STR);
             }
             Serial.print(F("]"));
@@ -235,11 +235,12 @@ void Serial_Score (void) {
     Serial.println(S.juiz);
     Serial.println(F("-------------------------------------")); 
     
-    sprintf_P(STR, PSTR("(v%d%d%d/%dcm/%ds/max%d/equ%d/cont%d/bolas%d/lim%d/sens%d)"),
+    sprintf_P(STR, PSTR("(v%d%d%d/%dcm/%ds/max(%d,%d)/equ%d/cont%d/bolas%d/lim%d/sens%d)"),
                 MAJOR, MINOR, REVISION,
                 S.distancia,
                 (int)(S.timeout/1000),
                 (int)S.maximas,
+                (int)S.reves,
                 (int)S.equilibrio,
                 (int)CONT_PCT,
                 (int)ABORT_FALLS,
@@ -466,8 +467,11 @@ _COMPLETE:
         S.equilibrio = 0;
     } else if (strncmp_P(CMD, PSTR("limite "), 7) == 0) {
         S.limite = atoi(&CMD[7]);
-    } else if (strncmp_P(CMD, PSTR("sensibilidade "), 13) == 0) {
-        S.sensibilidade = min(SENS_MAX, atoi(&CMD[13]));
+    } else if (strncmp_P(CMD, PSTR("reves "), 5) == 0) {
+        S.reves = atoi(&CMD[13]);
+        if (S.reves != 0) {
+            S.reves = max(REVES_MIN, min(REVES_MAX, S.reves));
+        }
 /*
     } else if (strncmp_P(CMD, PSTR("continuidade "), 13) == 0) {
         S.continuidade = atoi(&CMD[13]);

@@ -28,8 +28,10 @@
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
 **1.** Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
+OBS: Caso queira a versão 2.0 (em teste), clique [aqui] (https://github.com/frescogo/aparelho/archive/v2.0.zip)
 
 **2.** Extraia todos os arquivos e pastas do pacote baixado ("aparelho-master.zip"), depois entre na pasta "aparelho-master";
+OBS: No caso da versão 2.0 você vai extrair todos os arquivos e depois navegar pelas pastas até chegar na pasta "software", então siga os passos abaixo.
 
 **3.** Entre na pasta "software" e em seguida dê dois cliques no arquivo "**software.ino**", isso fará com que seja aberta a aplicação **IDE Arduino** e todo o pacote carregado automaticamente;
 

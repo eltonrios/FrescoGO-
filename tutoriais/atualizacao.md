@@ -27,7 +27,7 @@
 
 ## *Efetuando atualização:*
 ---------------------------------------------------------------------
-**1.** Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente;
+**1.** Clique [aqui](https://github.com/frescogo/aparelho/archive/master.zip) para baixar a versão mais recente (1.12.2);
 OBS: Caso queira a versão 2.0 (em teste), clique [aqui] (https://github.com/frescogo/aparelho/archive/v2.0.zip)
 
 **2.** Extraia todos os arquivos e pastas do pacote baixado ("aparelho-master.zip"), depois entre na pasta "aparelho-master";

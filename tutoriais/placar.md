@@ -55,7 +55,7 @@ Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo 
 6. Em cima do total da dupla aparece o set de configurações que está em uso;
 7. Abaixo do total da dupla, à esquerda, aparecerá o valor máximo de pontuação obtida naquele aparelho desde o momento em que o placar foi ligado;
 8. As configurações de revés e tempo tem que ser feitas conectando o aparelho no celular (e passando para o modo cel) ou no Monitor Serial do Arduino IDE (nesse caso não precisa passar para modo cel).
-9. O decréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
+9. O decréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão.
 
  
 

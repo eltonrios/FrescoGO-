@@ -50,12 +50,12 @@ Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo 
 1. Não há necessidade de trocar de aparelho (FrescoGO) entre um jogo e outro, a menos que você precise fazer alterações nas configurações;
 2. A mudança dos nomes dos jogadores pode ser feita a partir do teclado do computador, usando **CTRL+E** para digitar o nome do jogador da esquerda, seguido de ENTER, depois use **CTRL+D** e entre com o nome da direita, teclando ENTER para confirmar;
 3. O nome do árbitro pode ser mudado teclando **CTRL+A**, depois ENTER para confirmar;
-4. Pressionando as teclas 1, 2 ou 3 você pode mudar a distância para sete, sete e meio ou oito metros, respectivamente;
+4. Pressionando as teclas **1**, **2** ou **3** você pode mudar a distância para sete, sete e meio ou oito metros, respectivamente;
 5. Teclando **CTRL+I** você pode inverter a posição dos nomes no placar, para ficar ajustado ao público e atletas (nada muda para o árbitro no que diz respeito aos botões);
 6. Em cima do total da dupla aparece o set de configurações que está em uso;
 7. Abaixo do total da dupla, à esquerda, aparecerá o valor máximo de pontuação obtida naquele aparelho desde o momento em que o placar foi ligado;
-8. As configurações de revés e tempo tem que ser feitas conectando o aperelho no celular (e passando para o modo cel) ou no Monitor Serial do Arduino IDE (nesse caso não precisa passar para modo cel).
-9. O descréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
+8. As configurações de revés e tempo tem que ser feitas conectando o aparelho no celular (e passando para o modo cel) ou no Monitor Serial do Arduino IDE (nesse caso não precisa passar para modo cel).
+9. O decréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
 
  
 

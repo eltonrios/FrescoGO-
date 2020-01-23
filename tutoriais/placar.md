@@ -27,15 +27,12 @@ Clique  agora em **placar.pde**
 
 O ambiente Processing será carregado, já com a aplicação PLACAR, e agora vamos ajustar umas pequenas coisas.
 
-Primeiramente precisamos ajustar a porta de comunicação e caso você tenha feito a atualização do firmware, então já viu isso, então vá na linha 2 (vide figura abaixo) e ajuste o número da porta (não apague nada, não insira espaços... apenas troque o número, se necessário).
+Primeiramente precisamos ajustar a porta de comunicação e caso você tenha feito a atualização do firmware, então já viu isso, então vá na linha 1 (vide figura abaixo) e insira "//" no início da linha, e na linha 3 retir o "//" e ajuste o número da porta (não apague nada, não insira espaços... apenas troque o número, se necessário).
 
 ![Porta](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/porta.png "porta")
 
-Na linha 3 você pode desativar as MAXIMAS, bastando trocar a palavra "true" (ativa) por "false" (desativa), e vice versa;
 
-![Maximas](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/maximas.png "maximas")
-
-Procure a linha 74, onde está escrito "size(1024, 768);", nela você pode  ajustar o tamanho da janela do placar, adequando à tela de seu computador, ou ainda optar por usar a opção de full screen, bastando habilitar a linha 75 (retirando o “//” no início da linha) e desabilitando a linha 74 (inserindo o “//”).
+Procure a linha 77, onde está escrito "size(1024, 768);", nela você pode  ajustar o tamanho da janela do placar, adequando à tela de seu computador, ou ainda optar por usar a opção de full screen, bastando habilitar a linha 78 (retirando o “//” no início da linha) e desabilitando a linha 74 (inserindo o “//”).
 
 ![Definição](https://github.com/eltonrios/FrescoGO_Up/blob/master/images/definicao_tela.png "definição")
 
@@ -52,7 +49,13 @@ Agora é só começar o jogo, marcando normalmente, e quando acabar (pelo tempo 
 **ATENÇÃO:**
 1. Não há necessidade de trocar de aparelho (FrescoGO) entre um jogo e outro, a menos que você precise fazer alterações nas configurações;
 2. A mudança dos nomes dos jogadores pode ser feita a partir do teclado do computador, usando **CTRL+E** para digitar o nome do jogador da esquerda, seguido de ENTER, depois use **CTRL+D** e entre com o nome da direita, teclando ENTER para confirmar;
-3. O descréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
+3. O nome do árbitro pode ser mudado teclando **CTRL+A**, depois ENTER para confirmar;
+4. Pressionando as teclas 1, 2 ou 3 você pode mudar a distância para sete, sete e meio ou oito metros, respectivamente;
+5. Teclando **CTRL+I** você pode inverter a posição dos nomes no placar, para ficar ajustado ao público e atletas (nada muda para o árbitro no que diz respeito aos botões);
+6. Em cima do total da dupla aparece o set de configurações que está em uso;
+7. Abaixo do total da dupla, à esquerda, aparecerá o valor máximo de pontuação obtida naquele aparelho desde o momento em que o placar foi ligado;
+8. As configurações de revés e tempo tem que ser feitas conectando o aperelho no celular (e passando para o modo cel) ou no Monitor Serial do Arduino IDE (nesse caso não precisa passar para modo cel).
+9. O descréscimo do tempo no placar é atualizado de 5 em 5 segundos aproximadamente, mas a contagem transcorre normalmente, com precisão;
 
  
 
